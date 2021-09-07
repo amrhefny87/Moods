@@ -2,8 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+<<<<<<< HEAD
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GrupoController;
+=======
+>>>>>>> feature/login-register
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +22,22 @@ use App\Http\Controllers\GrupoController;
 Auth::routes();
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
+<<<<<<< HEAD
+=======
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+>>>>>>> feature/login-register
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
