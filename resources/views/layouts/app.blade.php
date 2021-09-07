@@ -66,9 +66,9 @@
                 </div>
             </div>
         </nav>
-        <main class="py-4 prueba">
-            @yield('content-login')
-        </main>
+        <body class="py-4 prueba">
+            @yield('content')
+        </body>
 
     </div>
 </body>
