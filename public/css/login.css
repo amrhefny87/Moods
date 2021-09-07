@@ -1,0 +1,14 @@
+.prueba{
+    background-color: yellow !important;
+}
+
+.boton-create-account{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.enlace-register{
+    text-decoration: none;
+}
