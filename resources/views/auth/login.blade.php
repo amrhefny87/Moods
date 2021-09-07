@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container prueba">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+    <div class="row justify-content-center ">
+        <div class="col-md-8 align-items-center">
+            <div class="card ">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body formulario-card">
