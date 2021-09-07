@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.app');
+@section('content')
 
 <div class="containerCharacters d-flex justify-content-center align-items-center">
             <div class="incognite d-flex align-items-center flex-column">
@@ -36,3 +37,6 @@
                 </a>
             </div> -->
     </div>
+
+
+    @endsection
