@@ -18,13 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<<<<<<< HEAD
-    <link href="{{ asset('css/characters.css') }}" rel="stylesheet">
-
-
-=======
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
->>>>>>> d2535b5d4b095723641a4a7dec6de4ceb27aa7d9
 </head>
 <body>
     <div id="app">
