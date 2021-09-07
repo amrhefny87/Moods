@@ -28,7 +28,7 @@
     <body class="antialiased">
  <div class="cover-contain ">
         <button class="mood">Moods</button>
-        <button class="play">Ready To Play</button>
+        <a class="enlace-register" href="{{ route('login') }}"> <button class="play">Ready To Play</button></a>
     </div>
 
         <script src="{{asset('js/app.js')}}">
