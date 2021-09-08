@@ -24,9 +24,6 @@
 <body>
     <div id="app">
         
-        <body class="py-4 prueba">
-            @yield('content')
-        </body>
 
     </div>
 </body>
