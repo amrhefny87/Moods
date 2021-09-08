@@ -1,7 +1,34 @@
-@extends('layouts.app');
-@section('content')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-<div class="containerCharacters d-flex justify-content-center align-items-center">
+        <link href="{{asset('css/characters.css')}}" rel="stylesheet"/>
+        <title>Laravel8</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+ *{
+     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+        </style>
+
+        <style>
+            body {
+                font-family: 'Nunito', sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="containerCharacters d-flex justify-content-center align-items-center">
             <div class="incognite d-flex align-items-center flex-column">
                 <img class="ch0" src="{{ asset('images/character0.jpg') }} "/>
                 <h2>Who are you?</h2>
@@ -9,7 +36,7 @@
             <div class="d-flex justify-content-center align-items-center flex-wrap container">
                 <div class="d-flex align-items-center flex-column">
                     <img class="selectCharacter" src="{{ asset('images/ch1.png') }} "/>
-                    <p>The Outlier</p>
+                        <p>The Outlier</p>
                 </div>
                 <div class="d-flex align-items-center flex-column">
                     <img class="selectCharacter" src="{{ asset('images/ch2.png') }} "/>
@@ -28,15 +55,6 @@
                     <p>The Diva</p>
                 </div>
             </div>
-         <!--    <div class="icones ">
-                <a href="/selection">
-                    <img class="fas fa-arrow-left" src="<?php echo asset('images/return.png'); ?>"/>
-                </a>    
-                <a href="/">
-                    <img class="fas fa-home" src="<?php echo asset('images/home.png'); ?>"/>
-                </a>
-            </div> -->
-    </div>
+        </div>
+    </body>
 
-
-    @endsection
