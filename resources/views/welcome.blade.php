@@ -30,6 +30,8 @@
         <button class="mood">Moods</button>
         @if (Auth::check())
             <a class="enlace-register" href="{{ route('waiting') }}"> <button class="play">Ready To Play</button></a>
+        @else
+            <a class="enlace-register" href="{{ route('login') }}"> <button class="play">Ready To Play</button></a>
         @endif
 
     </div>
