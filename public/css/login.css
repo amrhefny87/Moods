@@ -4,8 +4,6 @@
     height: 100vh;
     width: 100%;
     background-size: cover;
-
-
 }
 
 .boton-create-account{
@@ -17,3 +15,6 @@
     text-decoration: none;
 }
 
+.card-body-login{
+    background-color: yellow !important;
+}
