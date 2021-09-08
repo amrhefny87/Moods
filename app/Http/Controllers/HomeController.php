@@ -25,17 +25,10 @@ class HomeController extends Controller
     {
         return view('waiting');
     }
-    
     public function intro(){
         return view('intro');
     }
-
-    public function create()
-    {
-        $user = Auth::user();
-        if($user->is_admin === 'admin') {
-            return view('admin.create');
-        }
-
+    public function mission(){
+        return view('mission');
     }
 }

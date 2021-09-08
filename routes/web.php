@@ -16,7 +16,7 @@ use App\Http\Controllers\GrupoController;
 |
 */
 
-Auth::routes();
+ Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
@@ -47,5 +47,8 @@ Route::get('/map', function () {
 
 
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/intro', [App\Http\Controllers\HomeController::class, 'intro'])->name('intro');
 
+Route::get('/mission', [App\Http\Controllers\HomeController::class, 'mission'])->name('mission');
 
