@@ -20,6 +20,6 @@
                 <p class="back">Back</p>
             </div>
         </div>
-        <script src="('/js/mission.js'">
+        <script src="('/js/mission.js'"></script>
     </body>
     </html>
