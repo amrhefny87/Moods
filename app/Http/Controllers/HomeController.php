@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,5 +28,14 @@ class HomeController extends Controller
     
     public function intro(){
         return view('intro');
+    }
+
+    public function create()
+    {
+        $user = Auth::user();
+        if($user->is_admin === 'admin') {
+            return view('admin.create');
+        }
+
     }
 }

@@ -22,6 +22,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/waiting', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('waiting');
+
+
 Route::get('/characters', function () {
     return view('characters');
 });
@@ -34,7 +37,6 @@ Route::get('/map', function () {
     return view('map');
 });
 
-Route::get('/waiting', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('waiting');
 
 
 
