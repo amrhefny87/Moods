@@ -1,11 +1,39 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-@section('content')
-<div class="container prueba">
+<link href="{{asset('css/login.css')}}" rel="stylesheet"/>
+        <title>Laravel8</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+ *{
+     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+        </style>
+
+        <style>
+            body {
+                font-family: 'Nunito', sans-serif;
+            }
+        </style>
+    </head>
+    <body class="container-body-login d-flex align-items-center">
+        
+
+<div class="container contenedor-login">
     <div class="row justify-content-center ">
-        <div class="col-md-8 align-items-center">
+        <div class="col-md-8 r row d-flex justify-content-center">
             <div class="card ">
-                <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body formulario-card">
                     <form method="POST" action="{{ route('login') }}">
@@ -67,9 +95,12 @@
                     </form>
                 </div>
             </div>
-            <a class="enlace-register" href="{{ route('register') }}"> <button class="btn btn-primary">crear cuenta nueva</button></a>
+            <a class="enlace-register" href="{{ route('register') }}"> <button class="btn btn-primary boton-create-account">crear cuenta nueva</button></a>
 
         </div>
     </div>
 </div>
-@endsection
+<script src="{{asset('js/app.js')}}">
+</script>
+</body>
+</html>
