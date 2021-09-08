@@ -30,7 +30,6 @@ Route::get('/intro', function () {
     return view('intro');
 });
 
-
 Route::get('/map', function () {
     return view('map');
 });
