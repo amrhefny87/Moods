@@ -31,4 +31,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 
+Route::get('/intro', [App\Http\Controllers\HomeController::class, 'intro'])->name('intro');
+
+
+
+
 
