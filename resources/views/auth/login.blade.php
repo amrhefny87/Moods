@@ -33,7 +33,7 @@
 <div class="container contenedor-login">
     <div class="row justify-content-center ">
         <div class="col-md-8 r row d-flex justify-content-center">
-            <div class="card ">
+            <div class="card-body-login card  ">
 
                 <div class="card-body formulario-card">
                     <form method="POST" action="{{ route('login') }}">
