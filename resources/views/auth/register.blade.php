@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-<link href="{{asset('css/login.css')}}" rel="stylesheet"/>
+<link href="{{asset('css/register.css')}}" rel="stylesheet"/>
         <title>Laravel8</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -27,11 +27,11 @@
             }
         </style>
     </head>
-    <body class="prueba d-flex align-items-center">
+    <body class="container-body-register d-flex align-items-center">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card card-body-login">
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
