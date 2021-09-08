@@ -26,6 +26,11 @@ Route::get('/characters', function () {
     return view('characters');
 });
 
+Route::get('/map', function () {
+    return view('map');
+});
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
