@@ -34,6 +34,9 @@ Route::get('/map', function () {
     return view('map');
 });
 
+Route::get('/waiting', function () {
+    return view('waiting');
+});
 
 
 
