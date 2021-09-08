@@ -1,0 +1,20 @@
+.container-body-login{
+    background-image: url('../images/Forest.gif');
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.boton-create-account{
+    margin-top: 10px;
+
+}
+
+.enlace-register{
+    text-decoration: none;
+}
+
+.card-body-login{
+    background-color: yellow !important;
+}

@@ -22,6 +22,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/characters', function () {
+    return view('characters');
+});
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+Route::get('/intro', [App\Http\Controllers\HomeController::class, 'intro'])->name('intro');
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/intro', [App\Http\Controllers\HomeController::class, 'intro'])->name('intro');
