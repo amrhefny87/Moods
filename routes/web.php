@@ -26,9 +26,15 @@ Route::get('/characters', function () {
     return view('characters');
 });
 
+Route::get('/intro', function () {
+    return view('intro');
+});
+
 Route::get('/map', function () {
     return view('map');
 });
+
+
 
 
 
@@ -36,7 +42,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 
-Route::get('/intro', [App\Http\Controllers\HomeController::class, 'intro'])->name('intro');
 
 
 
