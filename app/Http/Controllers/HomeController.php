@@ -28,4 +28,7 @@ class HomeController extends Controller
     public function intro(){
         return view('intro');
     }
+    public function mission(){
+        return view('mission');
+    }
 }

@@ -26,5 +26,5 @@ Route::get('/', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/intro', [App\Http\Controllers\HomeController::class, 'intro'])->name('intro');
 
-
+Route::get('/mission', [App\Http\Controllers\HomeController::class, 'mission'])->name('mission');
 
