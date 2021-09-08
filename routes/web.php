@@ -26,12 +26,23 @@ Route::get('/characters', function () {
     return view('characters');
 });
 
+Route::get('/intro', function () {
+    return view('intro');
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/map', function () {
+    return view('map');
+});
+
+Route::get('/waiting', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('waiting');
 
 
 
-Route::get('/intro', [App\Http\Controllers\HomeController::class, 'intro'])->name('intro');
+/* Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
+
+
+
 
 
 
