@@ -16,5 +16,18 @@
 }
 
 .card-body-login{
-    background-color: yellow !important;
+    background: rgba( 255, 255, 255, 0.30 );
+    box-shadow: 0 8px 32px 0 rgba(211, 212, 224, 0.37);
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.color-label{
+    color: white;
+}
+
+.password-forgot{
+    margin-left: -28px;
 }
