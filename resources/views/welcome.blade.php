@@ -28,7 +28,12 @@
     <body class="antialiased">
  <div class="cover-contain ">
         <button class="mood">Moods</button>
-        <a class="enlace-register" href="{{ route('login') }}"> <button class="play">Ready To Play</button></a>
+        @if (Auth::check())
+            <a class="enlace-register" href="{{ route('waiting') }}"> <button class="play">Ready To Play</button></a>
+        @else
+            <a class="enlace-register" href="{{ route('login') }}"> <button class="play">Ready To Play</button></a>
+        @endif
+
     </div>
 
         <script src="{{asset('js/app.js')}}">

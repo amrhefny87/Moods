@@ -34,11 +34,11 @@ Route::get('/map', function () {
     return view('map');
 });
 
+Route::get('/waiting', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('waiting');
 
 
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/* Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
 
 
 
