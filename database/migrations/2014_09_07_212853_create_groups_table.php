@@ -2,10 +2,12 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGruposTable extends Migration
+class CreateGroupsTable extends Migration
 {
+    use RefreshDatabase;
     /**
      * Run the migrations.
      *
@@ -13,13 +15,13 @@ class CreateGruposTable extends Migration
      */
     public function up()
     {
-        Schema::create('grupos', function (Blueprint $table) {
+        Schema::create('groups', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
             $table->timestamps();
-            $table->string('nombre_equipo')->nullable();
-            $table->boolean('impostor_id')->nullable();
+            $table->unsignedBigInteger('impostor_id')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); 
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); 
         });
     }
 
@@ -30,6 +32,6 @@ class CreateGruposTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('grupos');
+        Schema::dropIfExists('groups');
     }
 }

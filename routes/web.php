@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\GrupoController;
+use App\Http\Controllers\GroupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,12 +29,9 @@ Route::get('/characters', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/groups', [App\Http\Controllers\GroupController::class, 'index'])->name('groupsList');
+Route::post('/groups', [App\Http\Controllers\GroupController::class, 'store'])->name('groupsCreate');
+Route::delete('/groups/{id}', [App\Http\Controllers\GroupController::class, 'destroy'])->name('groupDelete');
+Route::patch('/users/{id}', [App\Http\Controllers\UserController::class, 'updateGroupId'])->name('updateGroupId');
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
+Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('usersList');
