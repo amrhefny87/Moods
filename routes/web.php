@@ -22,10 +22,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/waiting', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('waiting');
+Route::get('/waiting', [HomeController::class, 'index'])->middleware('auth')->name('waiting');
 /* Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
-Route::get('/intro', [App\Http\Controllers\HomeController::class, 'intro'])->name('intro');
-Route::get('/mission', [App\Http\Controllers\HomeController::class, 'mission'])->name('mission');
+Route::get('/intro', [HomeController::class, 'intro'])->middleware('auth')->name('intro');
+Route::get('/mission', [HomeController::class, 'mission'])->middleware('auth')->name('mission');
 
 
 Route::get('/characters', function () {
@@ -33,9 +33,13 @@ Route::get('/characters', function () {
 });
 
 
-Route::get('/map', function () {
+/* Route::get('/map', function () {
     return view('map');
-});
+}); */
+
+Route::get('/create', [HomeController::class, "create"])->name('create');
+
+
 
 
 

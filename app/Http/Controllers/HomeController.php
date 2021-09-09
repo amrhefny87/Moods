@@ -37,6 +37,9 @@ class HomeController extends Controller
 
     public function create()
     {
-       
+        $user = Auth::user();
+        if($user->is_admin === 'admin') {
+        return view('map');
+        }
     }
 }
