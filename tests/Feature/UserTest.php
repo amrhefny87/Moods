@@ -25,24 +25,48 @@ class UserTest extends TestCase
     }
 
     /** @test */
-    public function a_user_can_be_added_to_a_group(){
-        $user = User::factory()->create();
-        $group =Group::factory()->create();
-        // $group_id = $group->id;
-        // dd($group->id);
-        $response = $this->get('/users');
-        // dd($response);
-        // $response->assertOk();
-        $this->assertCount(1, User::all());
-        // $user->group_id = $group->id;
-        // $group->users()->attach($user);
-        $response = $this->patch('/users/1', [
-            'group_id' => 1
+    public function a_user_can_be_an_impostor(){
+        $this->withoutExceptionHandling();
+        $user = User::factory()->create([
+            'id'=>1
         ]);
+        
+        $response = $this->get('/users');
+        $response->assertOk();
+        $this->assertCount(1, User::all());
+        
+        $response = $this->put('/users/1', [
+            'impostor' => FALSE
+        ]);
+
         $user=User::first();
-        // dd($user);
-        // dd($response->id);
-        $this->assertEquals($user->group_id,1);
+        
+        $this->assertEquals($user->impostor,0);
     }
+
+    /** @test */
+    public function a_user_can_be_added_to_a_group()
+    {
+        $this->withoutExceptionHandling();
+        $user = User::factory()->create([
+            'id'=>1
+        ]);
+        $group = Group::factory()->create([
+            'id'=>2
+        ]);
+
+        $response = $this->get('/users');
+        $response->assertOk();
+        $this->assertCount(1, User::all());
+
+        $response = $this->post('/users/2/1');
+        // $user->groups()->save($group);
+        $user = User::first();
+        dd($user);
+    }
+    
+    
+
+
     
 }

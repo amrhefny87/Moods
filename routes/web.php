@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GroupController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/groups', [App\Http\Controllers\GroupController::class, 'index'])->name('groupsList');
 Route::post('/groups', [App\Http\Controllers\GroupController::class, 'store'])->name('groupsCreate');
 Route::delete('/groups/{id}', [App\Http\Controllers\GroupController::class, 'destroy'])->name('groupDelete');
-Route::patch('/users/{id}', [App\Http\Controllers\UserController::class, 'updateGroupId'])->name('updateGroupId');
-
+Route::put('/users/{id}', [App\Http\Controllers\UserController::class, 'updateImpostorStatus'])->name('updateImpostorStatus');
+Route::post('/users/{group_id}/{id}', [App\Http\Controllers\UserController::class, 'updateGroupId'])->name('updateGroupId');
 Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('usersList');

@@ -14,18 +14,25 @@ class UserController extends Controller
         return view('users', compact('users'));
     }
 
-    public function updateGroupID(Request $request, $id){
-        $user = User::find($id);
-                
+    public function updateImpostorStatus(Request $request, $id){
+        
+        $user = User::find($id);     
         $user->update([
-            'group_id' => $request->id
+            'impostor' => $request->impostor
         ]);
         
         return (User::all());
+    }
 
-
+    public function updateGroupId ($group_id, $id){
+        $user = User::find($id); 
+        $group = Group::find($group_id);
+        // $user->groups()->attach($group_id);
+        // $group->users()->attach($id);
         
     }
+
+    
 
 
 
