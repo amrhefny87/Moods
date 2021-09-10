@@ -11,13 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
-        <style>
- *{
-     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    }
-        </style>
+     
 
         <style>
             body {
@@ -25,13 +19,19 @@
             }
         </style>
     </head>
-    <body class="antialiased">
+    <body >
  <div class="cover-contain ">
         <button class="mood">Moods</button>
-        <a class="enlace-register" href="{{ route('login') }}"> <button class="play">Ready To Play</button></a>
+        @if (Auth::check())
+            <a class="enlace-register" href="{{ route('waiting') }}"> <button class="play">Ready To Play</button></a>
+        @else
+            <a class="enlace-register" href="{{ route('login') }}"> <button class="play">Ready To Play</button></a>
+        @endif
+
     </div>
 
         <script src="{{asset('js/app.js')}}">
         </script>
     </body>
 </html>
+
