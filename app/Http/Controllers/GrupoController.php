@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Grupo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GrupoController extends Controller
 {
@@ -24,7 +26,7 @@ class GrupoController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**

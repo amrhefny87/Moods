@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Grupo;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -30,5 +33,13 @@ class HomeController extends Controller
     }
     public function mission(){
         return view('mission');
+    }
+
+    public function create()
+    {
+        $user = Auth::user();
+        if($user->is_admin === 'admin') {
+        return view('map');
+        }
     }
 }
