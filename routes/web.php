@@ -34,5 +34,5 @@ Route::get('/groups', [App\Http\Controllers\GroupController::class, 'index'])->n
 Route::post('/groups', [App\Http\Controllers\GroupController::class, 'store'])->name('groupsCreate');
 Route::delete('/groups/{id}', [App\Http\Controllers\GroupController::class, 'destroy'])->name('groupDelete');
 Route::put('/users/{id}', [App\Http\Controllers\UserController::class, 'updateImpostorStatus'])->name('updateImpostorStatus');
-Route::post('/users/{group_id}/{id}', [App\Http\Controllers\UserController::class, 'updateGroupId'])->name('updateGroupId');
+Route::post('/users_link', [App\Http\Controllers\UserController::class, 'updateGroupId'])->name('updateGroupId');
 Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('usersList');

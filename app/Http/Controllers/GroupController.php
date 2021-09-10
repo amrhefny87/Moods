@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Group;
+use App\Models\User;
 
 class GroupController extends Controller
 {
     public function index()
     {
         $groups = Group::all();
-        return view('groups', ['groups'=>$groups]);
+        $users = User::all();
+        return view('groups')->with('groups',$groups)->with('users',$users);
     }
     public function store(Request $request)
     {
@@ -18,6 +20,9 @@ class GroupController extends Controller
             'name'=>request()->name
         ]);
         $group->save();
+        $groups = Group::all();
+        return view('groups', ['groups'=>$groups]);
+
         
 
 

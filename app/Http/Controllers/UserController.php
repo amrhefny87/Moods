@@ -11,7 +11,7 @@ class UserController extends Controller
     public function index(){
         $users = User::all();
         
-        return view('users', compact('users'));
+        return($users);
     }
 
     public function updateImpostorStatus(Request $request, $id){
@@ -24,9 +24,12 @@ class UserController extends Controller
         return (User::all());
     }
 
-    public function updateGroupId ($group_id, $id){
-        $user = User::find($id); 
-        $group = Group::find($group_id);
+    public function updateGroupId (Request $request){
+        // dd($request);
+        $user = User::find($request->users); 
+        // $group = Group::find($group_id);
+        $user->group_id = $request->group;
+        $user->save();
         // $user->groups()->attach($group_id);
         // $group->users()->attach($id);
         

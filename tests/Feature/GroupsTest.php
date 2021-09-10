@@ -6,6 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Http\Response;
 use App\Models\Group;
+use App\Models\User;
 use Carbon\Factory;
 use Tests\TestCase;
 
@@ -36,6 +37,8 @@ class GroupsTest extends TestCase
         $response = $this->get('/groups');
         $response->assertOk();
         $groups = Group::all();
+        // $users = User::all();
+        // dd($users);
         $response->assertViewIs('groups');
         $response->assertViewHas('groups', $groups);
     }

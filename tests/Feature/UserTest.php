@@ -48,21 +48,22 @@ class UserTest extends TestCase
     public function a_user_can_be_added_to_a_group()
     {
         $this->withoutExceptionHandling();
-        $user = User::factory()->create([
-            'id'=>1
-        ]);
-        $group = Group::factory()->create([
-            'id'=>2
-        ]);
+        $users = User::factory(3)->create();
+        $group = Group::factory(2)->create();
 
-        $response = $this->get('/users');
-        $response->assertOk();
-        $this->assertCount(1, User::all());
+        // $response = $this->get('/users');
+        // $response->assertOk();
+        // $this->assertCount(3, User::all());
 
-        $response = $this->post('/users/2/1');
+        $response = $this->post('/users_link', [
+            'users'=>$users[1]->id,
+            'group'=>$group[0]->id       
+        ]);
         // $user->groups()->save($group);
-        $user = User::first();
-        dd($user);
+        $user = User::find($users[1]->id);
+        dd($user->group_id);
+
+
     }
     
     
