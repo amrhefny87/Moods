@@ -1,4 +1,11 @@
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+}
 .selectCharacter {
     width: 15vw;
     margin-right: 10px;
@@ -50,5 +57,27 @@ h2 {
 }
 
 button{
-    height: 20px;
+    height: auto;
+    background: transparent;
+    border-style: none;
 }
+.text{
+    text-align: center;
+}
+.text:hover{
+    color: #FFFFFF;
+background: #232323;
+text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+color: #FFFFFF;
+background: #232323;
+}
+button img:hover{
+    -moz-transform: translate(-8px, 6px) skew(12deg, 5deg);
+-webkit-transform: translate(-8px, 6px) skew(12deg, 5deg);
+-o-transform: translate(-8px, 6px) skew(12deg, 5deg);
+-ms-transform: translate(-8px, 6px) skew(12deg, 5deg);
+transform: translate(-8px, 6px) skew(12deg, 5deg);
+border: 2px solid rgba(28,110,164,0.66);
+border-radius: 13px 14px 10px 8px;
+}
+
