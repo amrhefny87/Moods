@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GroupController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +17,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('/characters', function () {
+    return view('characters');
+});
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/groups', [App\Http\Controllers\GroupController::class, 'index'])->name('groupsList');
+Route::post('/groups', [App\Http\Controllers\GroupController::class, 'store'])->name('groupsCreate');
+Route::delete('/groups/{id}', [App\Http\Controllers\GroupController::class, 'destroy'])->name('groupDelete');
+Route::put('/users/{id}', [App\Http\Controllers\UserController::class, 'updateImpostorStatus'])->name('updateImpostorStatus');
+Route::post('/users_link', [App\Http\Controllers\UserController::class, 'updateGroupId'])->name('updateGroupId');
+Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('usersList');
