@@ -34,11 +34,13 @@
                 <div class="container-fluid d-flex flex-wrap justify-content-around">
                 <h1>Users</h1>
                 @foreach ($users as $user)
+                    @if ($user->group_id === null & $user->role !== 'admin')
                     <div>
                         <p>* {{$user->name}}</p>
-                        <img class="arrow" src="{{ asset('images/RedArrow.png') }}" alt="">
-
+                        <!-- <img class="arrow" src="{{ asset('images/RedArrow.png') }}" alt=""> -->
+                        <a href="{{ route('updateGroupId', ['id'=>$user->id])}}" class="text-sm text-white underline">add</a>
                     </div>
+                    @endif
                     @endforeach 
                 <hr>
                 <form method="POST" action="{{ route('groupsCreate') }}">
@@ -68,6 +70,13 @@
                     @foreach ($groups as $group)
                     <div>
                         <p>* {{$group->name}}</p>
+                        @foreach ($users as $user)
+                            @if ($user->group_id == $group->id & $user->role !== 'admin')
+                                <p>-{{$user->name}}</p>
+                                <a href="{{ route('removeGroupId')}}" class="text-sm text-white underline">remove</a>
+
+                            @endif
+                        @endforeach
                     </div>
                     @endforeach
                 </div>

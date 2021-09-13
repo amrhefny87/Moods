@@ -61,9 +61,26 @@ class UserTest extends TestCase
         
         $this->assertEquals($user->group_id,1);
 
+    }
+
+    /** @test */
+    public function a_user_can_be_removed_from_a_group()
+    {
+        $this->withoutExceptionHandling();
+        $group = Group::factory(1)->create();
+        $users = User::factory(1)->create([
+            'group_id'=>1
+        ]);
+
+        $response = $this->post('/users_unlink', [
+            'users'=>$users[0]->id
+        ]);
+        $user = User::find($users[0]->id);
+        $this->assertEquals($user->group_id,null);
 
 
     }
+    
     
     
 
