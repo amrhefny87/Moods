@@ -39,6 +39,7 @@ Route::get('/characters', function () {
 }); */
 
 Route::get('/create', [HomeController::class, "create"])->name('create');
+Route::get('/missionImp', [HomeController::class, "missionImp"])->name('missionImp');
 
 
 
