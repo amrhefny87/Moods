@@ -19,6 +19,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/home';
     public const WAITING = '/waiting';
+    public const CHARACTERS = '/characters';
 
     /**
      * The controller namespace for the application.

@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Grupo;
+use App\Models\Group;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class GrupoFactory extends Factory
+class GroupFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Grupo::class;
+    protected $model = Group::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class GrupoFactory extends Factory
     public function definition()
     {
         return [
-            'nombre_equipo'=>$this->faker->name(),
+            'name' => $this->faker->name(),
         ];
     }
 }
