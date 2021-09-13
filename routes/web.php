@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\UserController;
 
@@ -32,15 +33,9 @@ Route::get('/mission', [HomeController::class, 'mission'])->middleware('auth')->
 Route::get('/characters', function () {
     return view('characters');
 });
-
-
 /* Route::get('/map', function () {
     return view('map');
 }); */
-
-Route::get('/map', [HomeController::class, "create"])->middleware('admin')->name('map');
-
-
 
 Route::get('/groups', [App\Http\Controllers\GroupController::class, 'index'])->name('groupsList');
 Route::post('/groups', [App\Http\Controllers\GroupController::class, 'store'])->name('groupsCreate');
@@ -48,3 +43,7 @@ Route::delete('/groups/{id}', [App\Http\Controllers\GroupController::class, 'des
 Route::put('/users/{id}', [App\Http\Controllers\UserController::class, 'updateImpostorStatus'])->name('updateImpostorStatus');
 Route::post('/users_link', [App\Http\Controllers\UserController::class, 'updateGroupId'])->name('updateGroupId');
 Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('usersList');
+
+
+
+Route::get('/admin', [AdminController::class, 'index'] )->middleware('auth.admin')->name('admin.index');

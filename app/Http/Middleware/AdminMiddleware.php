@@ -22,7 +22,7 @@ class AdminMiddleware
             //dd('admin');
             return $next($request);
         }
-        return redirect()->route('home');
+        return redirect()->to('/');
         
     }
 }
