@@ -42,7 +42,10 @@ class HomeController extends Controller
 
     public function create()
     {
+        $user = Auth::user();
+        if($user->role === 'admin') {
         return view('map');
+        }
         
     }
 }

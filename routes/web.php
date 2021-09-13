@@ -37,6 +37,11 @@ Route::get('/characters', function () {
     return view('map');
 }); */
 
+
+Route::get('/map', [HomeController::class, "create"])->name('map');
+
+
+
 Route::get('/groups', [App\Http\Controllers\GroupController::class, 'index'])->name('groupsList');
 Route::post('/groups', [App\Http\Controllers\GroupController::class, 'store'])->name('groupsCreate');
 Route::delete('/groups/{id}', [App\Http\Controllers\GroupController::class, 'destroy'])->name('groupDelete');
