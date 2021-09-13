@@ -26,6 +26,7 @@ Route::get('/waiting', [HomeController::class, 'index'])->middleware('auth')->na
 /* Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
 Route::get('/intro', [HomeController::class, 'intro'])->middleware('auth')->name('intro');
 Route::get('/mission', [HomeController::class, 'mission'])->middleware('auth')->name('mission');
+Route::get('/map', [HomeController::class, 'map'])->middleware('auth')->name('map');
 
 
 Route::get('/characters', function () {

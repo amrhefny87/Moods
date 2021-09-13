@@ -124,7 +124,7 @@
       color: white;
       margin-bottom:0;
   }
-  .titleSmall {
+   .titleSmall {
       width: 60vw ;
       border-radius: 1rem;
       background-color: rgba(255, 255, 255, 0.3);
@@ -140,7 +140,8 @@
       padding: 20vh;
   }
   .question {
-      width: 40vw;
+      width: 46vw;
+      height: 8vh;
       margin-bottom: 3vh;
       background-color: rgba(255, 255, 255, 0.5);
   }
@@ -209,7 +210,7 @@
             }
 
             @media (max-width: 452px){
-               
+
                 .cover-contain {
                     background-image: url(../../../public/storage/images/hacker.jpg);
                     background-size: 100% 100%;
@@ -246,11 +247,11 @@
                     line-height: 20px;
                     box-shadow: 6px 0px 0px #03532b;
                     outline: transparent;
-                   
+
                 }
                 }
                 @media (max-width: 518px){
-               
+
                     .cover-contain {
                         background-image: url(../../../public/storage/images/hacker.jpg);
                         background-size: 100% 100%;
@@ -267,7 +268,7 @@
                     }
                     }
                     @media (max-width: 404px){
-               
+
                         .cover-contain {
                             background-image: url(../../../public/storage/images/hacker.jpg);
                             background-size: 100% 100%;
@@ -295,11 +296,11 @@
                             line-height: 20px;
                             box-shadow: 6px 0px 0px #03532b;
                             outline: transparent;
-                            
+
                         }
                         }
                         @media (max-width: 374px){
-               
+
                             .cover-contain {
                                 background-image: url(../../../public/storage/images/hacker.jpg);
                                 background-size: 100% 100%;
@@ -336,7 +337,7 @@
                                 line-height: 20px;
                                 box-shadow: 6px 0px 0px #03532b;
                                 outline: transparent;
-                               
+
                             }
                             h3 {
                                 color: white;
@@ -346,11 +347,11 @@
                             .selectCharacter {
                                 height: 10vh;
                                 margin: -1vh -5vh 0vh 0vh;
-                             
+
                             }
                             }
                             @media (max-width: 221px){
-               
+
                                 .cover-contain {
                                     background-image: url(../../../public/storage/images/hacker.jpg);
                                     background-size: 100% 100%;
@@ -388,7 +389,7 @@
                                     line-height: 20px;
                                     box-shadow: 6px 0px 0px #03532b;
                                     outline: transparent;
-                                   
+
                                 }
                                 h3 {
                                     color: white;
@@ -398,27 +399,26 @@
                                 .selectCharacter {
                                     height: 10vh;
                                     margin: -1vh -5vh 0vh 0vh;
-                                 
+
                                 }
                                 }
-                
-            
-        
-                
-        
-    
-    
-            
-        
-        
-    
-    
-            
-    
 
 
-        
-    
-    
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
