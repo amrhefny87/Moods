@@ -38,7 +38,8 @@ Route::get('/characters', function () {
     return view('map');
 }); */
 
-Route::get('/map', [HomeController::class, "create"])->middleware('admin')->name('map');
+
+Route::get('/map', [HomeController::class, "create"])->name('map');
 
 
 
