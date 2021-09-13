@@ -12,7 +12,10 @@ class GroupController extends Controller
     {
         $groups = Group::all();
         $users = User::all();
-        return view('groups')->with('groups',$groups)->with('users',$users);
+        return view('groups')->with('groups',$groups)
+        ->with('users',$users)
+        ;
+        return ($groups);
     }
     public function store(Request $request)
     {

@@ -27,12 +27,10 @@ class UserController extends Controller
     public function updateGroupId (Request $request){
         // dd($request);
         $user = User::find($request->users); 
-        // $group = Group::find($group_id);
         $user->group_id = $request->group;
         $user->save();
-        // $user->groups()->attach($group_id);
-        // $group->users()->attach($id);
         
+        return (User::all());
     }
 
     

@@ -36,10 +36,10 @@
                 @foreach ($users as $user)
                     <div>
                         <p>* {{$user->name}}</p>
-                        <!-- <img class="arrow" src="{{ asset('images/RedArrow.png') }}" alt=""> -->
+                        <img class="arrow" src="{{ asset('images/RedArrow.png') }}" alt="">
 
                     </div>
-                    @endforeach
+                    @endforeach 
                 <hr>
                 <form method="POST" action="{{ route('groupsCreate') }}">
                         @csrf
