@@ -39,8 +39,8 @@ Route::get('/characters', function () {
 }); */
 
 
-Route::get('/map', [HomeController::class, "create"])->name('map');
-
+/* Route::get('/map', [HomeController::class, "create"])->name('map');
+ */
 
 
 Route::get('/groups', [App\Http\Controllers\GroupController::class, 'index'])->name('groupsList');
