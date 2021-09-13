@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 use App\Models\User;
-use App\Models\Grupo;
+use App\Models\Group;
 
 use Illuminate\Database\Seeder;
 
@@ -25,6 +25,6 @@ class DatabaseSeeder extends Seeder
         User::factory(1)->create(['name' => 'Thierno', 'email' =>'thierno@gmail.com','is_admin' => false]);
 
 
-        Grupo::factory(5)->create();
+        Group::factory(5)->create();
     }
 }
