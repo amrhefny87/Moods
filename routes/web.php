@@ -33,13 +33,13 @@ Route::get('/mission', [HomeController::class, 'mission'])->middleware('auth')->
 Route::get('/characters', function () {
     return view('characters');
 });
-/* Route::get('/map', function () {
+
+Route::get('/map', function () {
     return view('map');
-}); */
+});
 
 
-/* Route::get('/map', [HomeController::class, "create"])->name('map');
- */
+
 
 
 Route::get('/groups', [App\Http\Controllers\GroupController::class, 'index'])->name('groupsList');
