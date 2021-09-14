@@ -26,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        if(Auth::user()->is_admin)
+        {
+            return redirect()->to('/admin');
+        }
         return view('waiting');
     }
     public function intro(){
