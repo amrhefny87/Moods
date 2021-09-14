@@ -16,16 +16,29 @@
 
     <!-- Styles -->
 </head>
-<body>
+<body onload="setInterval(cargarSegundo,1000);">
     <div class=" container-fluid  cover-contain">
-        <div class="time d-flex justify-content-center align-items-center">
-         <p>{{-- {{ $this.time }} --}}1:20</p>   
-        </div>
+
+
+            <div class="cont-temporizador time d-flex justify-content-center align-items-center">
+
+
+                <div class="bloque">
+                    <div class="minutos" id="minutos">--</div>
+
+                </div>
+                <div class="bloque">
+                    <div class="segundos" id="segundos">--</div>
+
+                </div>
+            </div>
+
+
         <div class="impostorTitle d-flex justify-content-center align-items-center">
             <h3>Elige al IMPOSTOR!</h3>
         </div>
         <div class="contain-select">
-    
+
                 <div class="">
                     <img class="selectCharacter" src="{{asset('images/ch1.png') }}"/>
                     <p>The Outlier</p>
@@ -47,9 +60,9 @@
                     <p>The Diva</p>
                 </div>
             </div>
-    
+
     </div>
-    
+    <script src="{{asset('js/missionImp.js')}}"></script>
 </body>
 </html>
 
