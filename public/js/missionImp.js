@@ -1,5 +1,5 @@
 
-let minutos = 2;
+let minutos = 1;
 let segundos = 0;
 cargarSegundo();
 
@@ -9,6 +9,11 @@ function cargarSegundo(){
 
     if(segundos < 0){
         segundos = 59;
+
+
+    }else if ( segundos = 0){
+
+        clearInterval(segundos,);
     }
 
 
@@ -20,21 +25,22 @@ function cargarSegundo(){
     document.getElementById('segundos').innerHTML = txtSegundos;
     segundos--;
 
-    cargarMinutos(segundos);
+    cargarSegondo(segundos);
 }
 
-function cargarMinutos(segundos){
+function  cargarSegondo(segundos){
     let txtMinutos;
 
     if(segundos == -1 && minutos !== 0){
         setTimeout(() =>{
             minutos--;
-        },2)
-    }else if(segundos == -1 && minutos == 0){
-        setTimeout(() =>{
-            minutos = 2;
-        },500)
+        },1000)
+    }else if(segundos == -1 && segundos == 0){
+
     }
+
+
+
 
 
     if(minutos < 10){
@@ -43,24 +49,27 @@ function cargarMinutos(segundos){
         txtMinutos = minutos;
     }
     document.getElementById('minutos').innerHTML = txtMinutos;
-    cargarHoras(segundos,minutos);
+    cargarMinutos(segundos,minutos);
 }
 
 //Definimos y ejecutamos las horas
-function cargarminutos(segundos,minutos){
-    let txtHoras;
+function cargarTiempo(segundos,minutos){
+    let txtMinutos;
 
-    if(segundos == -1 && minutos == 0 && horas !== 0){
+    if(segundos == -1 && minutos == 0 ){
         setTimeout(() =>{
-            horas--;
+            minutos--;
         },500)
-    }else if(segundos == -1 && minutos == 0 && horas == 0){
-       setTimeout(cargarMinutos,1000)
+    }else if(segundos == -1 && minutos == 0 && segundos == 0 ){
+        setTimeout(() =>{
+            segundos = 0;
+        },500)
     }
 
-    clearInterval();
+
 }
-/* window.setInterval(cargarSegundo,1000); */
+
+//Ejecutamos cada segundo
 
 
 
