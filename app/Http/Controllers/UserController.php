@@ -24,23 +24,35 @@ class UserController extends Controller
         return (User::all());
     }
 
-    public function updateGroupId (Request $request, $id){
-        // dd($request);
-        $user = User::find($id); 
-        // $user->group_id = $request->group_id;
+    public function updateGroupId (Request $request){
+        foreach ($request->user as $requests){
+            // dd($request->group);
+            $user = User::find($requests); 
+            
+            $user->group_id = $request->group[0];
+            $user->save();
+
+            
+
+        };
         
-        $user->group_id = 1;
-        $user->save();
+        
+        
         
         return redirect()->route('groupsList');
         
     }
 
-    public function removeGroupId (Request $request){
-        $user = User::find($request->users);
-        $user->group_id = 3;
+    public function removeGroupId ($id){
+        $user = User::find($id);
+        // dd($user->group_id);
+        $user->group_id = 2;
+        // $user->update([
+        //     'group_id' => NULL
+        // ]);
         $user->save();
-        return (User::all());
+        dd($user->group_id);
+        return redirect()->route('groupsList');
     }
 
 }

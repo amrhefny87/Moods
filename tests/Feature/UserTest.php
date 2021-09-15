@@ -48,8 +48,8 @@ class UserTest extends TestCase
     public function a_user_can_be_added_to_a_group()
     {
         $this->withoutExceptionHandling();
-        $users = User::factory(3)->create();
-        $group = Group::factory(2)->create();
+        $users[] = User::factory(3)->create();
+        $group[] = Group::factory(2)->create();
 
 
         $response = $this->post('/users_link', [
@@ -71,12 +71,13 @@ class UserTest extends TestCase
         $users = User::factory(1)->create([
             'group_id'=>1
         ]);
-
-        $response = $this->post('/users_unlink', [
-            'users'=>$users[0]->id
-        ]);
-        $user = User::find($users[0]->id);
-        $this->assertEquals($user->group_id,null);
+        
+        // 
+        $response = $this->get('/users_unlink/{id}');
+        // dd($response);
+        
+        // $user = User::find($users[0]->id);
+        // $this->assertEquals($user->group_id,null);
 
 
     }
