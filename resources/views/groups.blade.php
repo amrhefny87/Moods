@@ -52,12 +52,18 @@
                         <label>
                             <input type="checkbox" value="{{$group->id}}" name="group[]">
                         </label>
+                        <a href="{{route('groupDelete',['id'=>$group->id])}}">remove group</a>
+
                         @foreach ($users as $user)
                             @if ($user->group_id == $group->id)
                             
 
                                 <p>{{$user->name}}</p>
+                                @if ($user->impostor == 1)
+                                    <p class="text-warning">impostor</p>
+                                @endif
                                 <a href="{{route('removeGroupId',['id'=>$user->id])}}">remove</a>
+
                             @endif
                         @endforeach
                 @endforeach
@@ -86,6 +92,7 @@
                             </div>
                         </div>
                     </form>
+                    <a href="{{route('chooseTheImpostor')}}">Choose Impostor</a>
                 </div>
             </div>
         </div>

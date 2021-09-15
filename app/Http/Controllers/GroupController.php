@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Group;
 use App\Models\User;
+use App\Http\Controllers\UserController;
 use Facade\Ignition\Exceptions\ViewException;
 
 class GroupController extends Controller
@@ -14,10 +15,8 @@ class GroupController extends Controller
         $groups = Group::all();
         $users = User::all();
         return view('groups')->with('groups',$groups)
-        ->with('users',$users)
-        ;
-        // return ($groups);
-        // return view('groups', ['groups'=>$groups, 'users'=>$users]);
+        ->with('users',$users);
+    
     }
     public function store(Request $request)
     {
@@ -29,7 +28,7 @@ class GroupController extends Controller
         $group->save();
         
         return redirect()->route('groupsList');
-        // return view('groups', ['groups'=>$groups, 'users'=>$users]);
+        
 
 
         
@@ -38,10 +37,14 @@ class GroupController extends Controller
     }
 
     public function destroy($id){
-        Group::find($id)->delete();
-        $groups=Group::all();
         $users = User::all();
-        return view('groups', ['groups'=>$groups, 'users'=>$users]);
+        $user = collect($users)->where('group_id', $id)->all();
+        foreach ($user as $user) {
+            $user->group_id = null;
+            $user->save();
+        }
+        Group::find($id)->delete();
+        return redirect()->route('groupsList');
 
     }
 }

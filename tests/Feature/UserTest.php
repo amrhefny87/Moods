@@ -81,6 +81,17 @@ class UserTest extends TestCase
 
 
     }
+
+    /** @test */
+    public function impostor_can_be_choosen()
+    {
+        $this->withoutExceptionHandling();
+        // $group = Group::factory(1)->create();
+
+        $response = $this->get('/impostor');
+        $response->assertOk();
+    }
+    
     
     
     
