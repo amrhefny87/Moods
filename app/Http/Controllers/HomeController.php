@@ -26,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        if(Auth::user()->is_admin)
+        {
+            return redirect()->to('/admin');
+        }
         return view('waiting');
     }
     public function intro(){
@@ -37,9 +42,7 @@ class HomeController extends Controller
 
     public function create()
     {
-        $user = Auth::user();
-        if($user->is_admin === 'admin') {
-        return view('map');
-        }
+       
+        
     }
 }

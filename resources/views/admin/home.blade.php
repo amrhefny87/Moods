@@ -1,5 +1,6 @@
 @extends('layouts.app');
 
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -13,15 +14,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="intro">
-            <div class="text">
-            <h1>Intro</h1>
-            <p>One of you is a robot, you will have to discover who is. The robot knows all the answers. However, also knows how to cheat. It means that can lie. If you can not discover who is, the robot will get a code to kill your friend Samantha (Sam), who is a software developer, however you know she has been involved in  something  illegal.</p>
-            </div>
-            <div class="text1">
-                <p class="back">Back</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('You are logged in!') }}
+                </div>
             </div>
         </div>
-        <script src="('/js/mission.js'"></script>
-    </body>
-    </html>
+    </div>
+</div>
+<script src="('/js/mission.js'"></script>
+</body>
+</html>
