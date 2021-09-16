@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
+body{
+    background-image: url('../images/hacker.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+
+.users{
+    width: 30vh;
+    
+}
+
+.users-text {
+    font-size:medium;
+    font-family: 'Sarpanch', sans-serif;
+}
+
+
+
+
+

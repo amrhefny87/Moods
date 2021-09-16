@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->boolean('is_admin')->default(false);
             $table->boolean('impostor')->default(false);
-            $table->unsignedBigInteger('group_id')->nullable();
+            $table->unsignedBigInteger('group_id')->nullable()->default(NULL);
             $table->foreign('group_id')->references('id')->on('groups')->onDelete('cascade');
             
         });
