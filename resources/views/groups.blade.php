@@ -34,14 +34,43 @@
         <div class="col-md-12">
             <div class="card-special-black">
                 <div class="container-fluid d-flex flex-wrap justify-content-around">
+                
+                <form method="POST" action="{{route('updateGroupId')}}">
+                @csrf
                 <h1>Users</h1>
                 @foreach ($users as $user)
-                    <div>
-                        <p>* {{$user->name}}</p>
-                        <img class="arrow" src="{{ asset('images/RedArrow.png') }}" alt="">
-
+                    @if ($user->group_id === null && $user->role != 'admin')
+                    <div class="d-flex flex-column">
+                        <label>
+                            <input type="checkbox"  value="{{$user->id}}" name="user[]">
+                        </label>
+                        <p>{{$user->name}}</p>
                     </div>
-                    @endforeach 
+                    @endif
+                @endforeach
+                <h1>Groups</h1>
+                @foreach ($groups as $group)
+                        <p>{{$group->name}}</p>
+                        <label>
+                            <input type="checkbox" value="{{$group->id}}" name="group[]">
+                        </label>
+                        <a href="{{route('groupDelete',['id'=>$group->id])}}">remove group</a>
+
+                        @foreach ($users as $user)
+                            @if ($user->group_id == $group->id)
+                            
+
+                                <p>{{$user->name}}</p>
+                                @if ($user->impostor == 1)
+                                    <p class="text-warning">impostor</p>
+                                @endif
+                                <a href="{{route('removeGroupId',['id'=>$user->id])}}">remove</a>
+
+                            @endif
+                        @endforeach
+                @endforeach
+                <input type="submit" value="submit">
+                </form>
                 <hr>
                 <form method="POST" action="{{ route('groupsCreate') }}">
                         @csrf
@@ -65,13 +94,7 @@
                             </div>
                         </div>
                     </form>
-
-                    <h1>Groups</h1>
-                    @foreach ($groups as $group)
-                    <div>
-                        <p>* {{$group->name}}</p>
-                    </div>
-                    @endforeach
+                    <a href="{{route('chooseTheImpostor')}}">Choose Impostor</a>
                 </div>
             </div>
         </div>

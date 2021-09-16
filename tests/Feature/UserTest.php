@@ -48,8 +48,8 @@ class UserTest extends TestCase
     public function a_user_can_be_added_to_a_group()
     {
         $this->withoutExceptionHandling();
-        $users = User::factory(3)->create();
-        $group = Group::factory(2)->create();
+        $users[] = User::factory(3)->create();
+        $group[] = Group::factory(2)->create();
 
 
         $response = $this->post('/users_link', [
@@ -61,9 +61,38 @@ class UserTest extends TestCase
         
         $this->assertEquals($user->group_id,1);
 
+    }
+
+    /** @test */
+    public function a_user_can_be_removed_from_a_group()
+    {
+        $this->withoutExceptionHandling();
+        $group = Group::factory(1)->create();
+        $users = User::factory(1)->create([
+            'group_id'=>1
+        ]);
+        
+        // 
+        $response = $this->get('/users_unlink/{id}');
+        // dd($response);
+        
+        // $user = User::find($users[0]->id);
+        // $this->assertEquals($user->group_id,null);
 
 
     }
+
+    /** @test */
+    public function impostor_can_be_choosen()
+    {
+        $this->withoutExceptionHandling();
+        // $group = Group::factory(1)->create();
+
+        $response = $this->get('/impostor');
+        $response->assertOk();
+    }
+    
+    
     
     
 
