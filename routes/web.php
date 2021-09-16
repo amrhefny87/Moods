@@ -52,3 +52,14 @@ Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->nam
 
 
 Route::get('/admin', [AdminController::class, 'index'] )->middleware('auth.admin')->name('admin.index');
+
+
+Route::get('/chat', function() {
+    event(new \App\Events\PublicMessage());
+    return view('intro');
+});
+
+Route::get('/private-chat', function() {
+    event(new \App\Events\PrivateMessage(auth()->user()));
+    dd('Private event executed successfully.');
+});
