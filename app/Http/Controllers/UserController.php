@@ -40,9 +40,7 @@ class UserController extends Controller
 
     public function removeGroupId ($id){
         $user = User::find($id);
-    
-        $user->group_id = 2;
-        $user->save();
+        
 
         $user->group_id = null;
         $user->save();

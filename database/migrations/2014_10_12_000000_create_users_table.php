@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
             $table->rememberToken();
             $table->timestamps();
-            $table->string('role')->default('user');
+            $table->boolean('is_admin')->default(false);
             $table->boolean('impostor')->default(false);
             $table->unsignedBigInteger('group_id')->nullable()->default(NULL);
             $table->foreign('group_id')->references('id')->on('groups')->onDelete('cascade');

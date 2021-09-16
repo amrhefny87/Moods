@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         User::factory(1)->create(['name' => 'Abdulha', 'email' =>'abdulha@gmail.com', 'is_admin' => false]);
         User::factory(1)->create(['name' => 'Thierno', 'email' =>'thierno@gmail.com', 'is_admin' => false]);
 
-
+        User::factory(5)->create();
 
         Group::factory(1)->create();
     }
