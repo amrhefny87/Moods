@@ -98,10 +98,11 @@
                         <a href="{{route('groupDelete',['id'=>$group->id])}}">remove group</a>
                         </div>
                     
-                    <div class="d-block flex-row justify-content-around">
+                        <div>   
+                    
                             @foreach ($users as $user)
                                 @if ($user->group_id == $group->id)
-                                
+                            
                                 <div class="ml-3 mr-2">
                                     <p class="users-text text-white">- {{$user->name}}</p>
                                 </div>
@@ -113,9 +114,10 @@
                                 <div>
                                     <a href="{{route('removeGroupId',['id'=>$user->id])}}">remove</a>
                                 </div>
+                            
                                 @endif
                             @endforeach
-                    </div>
+                            </div>
                     @endforeach
                     </div>
                     <input type="submit" value="submit">
