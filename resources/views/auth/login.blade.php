@@ -95,8 +95,9 @@
                     </form>
                 </div>
             </div>
+            <div>
             <a class="enlace-register" href="{{ route('register') }}"> <button class="btn btn-outline-light boton-create-account">crear cuenta nueva</button></a>
-
+            </div>
         </div>
     </div>
 </div>

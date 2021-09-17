@@ -68,7 +68,7 @@ Route::get('/admin', [AdminController::class, 'index'] )->middleware('auth.admin
 Route::get('/chat', function() {
     event(new \App\Events\PublicMessage());
     return view('intro');
-});
+})->name('directUsers');
 
 Route::get('/private-chat', function() {
     event(new \App\Events\PrivateMessage(auth()->user()));

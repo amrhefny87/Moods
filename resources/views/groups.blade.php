@@ -57,7 +57,10 @@
                                 </div>
                         </form>
                         <div>
+                        <div>
                         <a href="{{route('chooseTheImpostor')}}">Choose Impostor</a>
+                        </div>
+                        <a href="{{route('directUsers')}}">Start Game</a>
                         </div>
                     </div>
                 <div class="d-flex flex-row justify-content-around">
@@ -119,11 +122,12 @@
                             @endforeach
                             </div>
                     @endforeach
-                    <input type="submit" value="submit">
-                    </div>
                     
+                    </div>
+                    <input type="submit" value="submit">
                     
                 </div>
+                
                     </form>
                 
                 
