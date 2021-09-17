@@ -119,8 +119,9 @@
                             @endforeach
                             </div>
                     @endforeach
-                    </div>
                     <input type="submit" value="submit">
+                    </div>
+                    
                     
                 </div>
                     </form>
