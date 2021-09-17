@@ -53,9 +53,12 @@ class UserController extends Controller
     public function chooseTheImpostor (){
         $groups = Group::all();
         $users = User::all();
+        foreach ($users as $user){
+            $user->impostor = 0;
+            $user->save();
+        };
         foreach ($groups as $group){
             $user = collect($users)->where('group_id', $group->id)->all();
-            
             $imp = array_rand($user);
             $impostor = $user[$imp];
             $this->updateImpostorStatus($impostor->id);
