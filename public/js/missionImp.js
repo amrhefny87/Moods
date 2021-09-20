@@ -43,12 +43,12 @@ function cargarMinutos(segundos){
         txtMinutos = minutos;
     }
     document.getElementById('minutos').innerHTML = txtMinutos;
-    cargarHoras(segundos,minutos);
+    (segundos,minutos);
 }
 
 
 function paraTiempo(){
-    clearInterval(segundos)
+clearInterval(cargarSegundo())
 }
 
 
