@@ -58,7 +58,7 @@ p {
             display: flex;
         justify-content: center;
         width: 15%;
-        border: solid 1px red;
+      /*   border: solid 1px red; */
         margin-top: 15px;
 
 }

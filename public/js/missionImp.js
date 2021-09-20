@@ -1,7 +1,7 @@
 
 let minutos = 1;
 let segundos = 0;
-cargarSegundo();
+
 
 
 function cargarSegundo(){
@@ -9,11 +9,6 @@ function cargarSegundo(){
 
     if(segundos < 0){
         segundos = 59;
-
-
-    }else if ( segundos = 0){
-
-        clearInterval(segundos,);
     }
 
 
@@ -25,22 +20,21 @@ function cargarSegundo(){
     document.getElementById('segundos').innerHTML = txtSegundos;
     segundos--;
 
-    cargarSegondo(segundos);
+    cargarMinutos(segundos);
 }
 
-function  cargarSegondo(segundos){
+function cargarMinutos(segundos){
     let txtMinutos;
 
     if(segundos == -1 && minutos !== 0){
         setTimeout(() =>{
             minutos--;
+        },2)
+    }else if(segundos == -1 && minutos == 0){
+        setTimeout(() =>{
+            minutos = 2;
         },1000)
-    }else if(segundos == -1 && segundos == 0){
-
     }
-
-
-
 
 
     if(minutos < 10){
@@ -49,27 +43,13 @@ function  cargarSegondo(segundos){
         txtMinutos = minutos;
     }
     document.getElementById('minutos').innerHTML = txtMinutos;
-    cargarMinutos(segundos,minutos);
+    cargarHoras(segundos,minutos);
 }
 
-//Definimos y ejecutamos las horas
-function cargarTiempo(segundos,minutos){
-    let txtMinutos;
 
-    if(segundos == -1 && minutos == 0 ){
-        setTimeout(() =>{
-            minutos--;
-        },500)
-    }else if(segundos == -1 && minutos == 0 && segundos == 0 ){
-        setTimeout(() =>{
-            segundos = 0;
-        },500)
-    }
-
-
+function paraTiempo(){
+    clearInterval(segundos)
 }
-
-//Ejecutamos cada segundo
 
 
 
