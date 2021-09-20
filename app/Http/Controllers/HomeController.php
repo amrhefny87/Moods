@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Grupo;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +26,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        if(Auth::user()->is_admin)
+        {
+            return redirect()->to('/admin');
+        }
+        return view('waiting');
+    }
+    public function intro(){
+        return view('intro');
+    }
+    public function mission(){
+        return view('mission');
+    }
+
+    public function create()
+    {
+        
     }
 }
