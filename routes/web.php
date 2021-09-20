@@ -72,6 +72,6 @@ Route::get('/chat', function() {
 
 Route::get('/private-chat', function() {
     event(new \App\Events\PrivateMessage(auth()->user()));
-    dd('Private event executed successfully.');
+    dd('Canal privado.');
 });
 
