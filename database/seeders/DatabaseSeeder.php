@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create(['name' => 'Anya', 'email' =>'anya@gmail.com', 'is_admin' => true]);
 
         User::factory(1)->create(['name' => 'Amr', 'email' =>'amr@gmail.com', 'is_admin' => false]);
+        User::factory(1)->create(['name' => 'Andrea', 'email' =>'andrea@gmail.com', 'is_admin' => false]);
         User::factory(1)->create(['name' => 'Andres', 'email' =>'andres@gmail.com', 'is_admin' => false]);
         User::factory(1)->create(['name' => 'Franco', 'email' =>'franco@gmail.com', 'is_admin' => false]);
         User::factory(1)->create(['name' => 'Abdulha', 'email' =>'abdulha@gmail.com', 'is_admin' => false]);
