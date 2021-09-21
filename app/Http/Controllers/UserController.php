@@ -136,4 +136,20 @@ class UserController extends Controller
         $character= collect($characters)->where('id', $impostor->character_id)->first();
         return view('impostor')->with('character',$character)->with('impostor',$impostor);;
     }
+
+    public function endGame(){
+        $user = User::all();
+        $groups = Group::all();
+        foreach ($groups as $groups){
+            $groups->delete();
+        }
+        foreach ($user as $user){
+            if($user->is_admin === 0){
+                $user->delete();
+            }
+            
+        }
+        return redirect()->route('welcome');
+
+    }
 }

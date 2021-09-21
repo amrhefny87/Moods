@@ -22,7 +22,7 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/waiting', [HomeController::class, 'index'])->middleware('auth')->name('waiting');
  //* Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
@@ -62,7 +62,7 @@ Route::get('/impostor', [App\Http\Controllers\UserController::class, 'chooseTheI
 Route::get('/startGame', [UserController::class, 'startGame'])->name('startGame');
 Route::get('/getCharacter', [UserController::class, 'getCharacter'])->name('getCharacter');
 Route::get('/redirectUsers', [UserController::class, 'redirectUsers'])->name('redirectUsers');
-
+Route::get('/endGame', [UserController::class, 'endGame'])->name('endGame');
 
 
 Route::get('/admin', [AdminController::class, 'index'])->middleware('auth.admin')->name('admin.index');
