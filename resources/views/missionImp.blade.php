@@ -16,22 +16,17 @@
 
     <!-- Styles -->
 </head>
-<body onload="setInterval(cargarSegundo,1000);">
+<body>
     <div class=" container-fluid  cover-contain">
 
 
             <div class="cont-temporizador time d-flex justify-content-center align-items-center">
 
 
-                <div class="bloque">
-                    <div class="minutos" id="minutos">--</div>
-
-                </div>
-                <div class="bloque">
-                    <div class="segundos" id="segundos">--</div>
-
-                </div>
+                <h1></h1>
             </div>
+
+        
 
 
         <div class="impostorTitle d-flex justify-content-center align-items-center">

@@ -1,55 +1,41 @@
+let timeSecond = 10;
+const timeH = document.querySelector("h1");
 
-let minutos = 1;
-let segundos = 0;
+displayTime(timeSecond);
 
+const countDown = setInterval(() => {
+  timeSecond--;
+  displayTime(timeSecond);
+  if (timeSecond == 0 || timeSecond < 1) {
+    endCount();
+    clearInterval(countDown);
 
+    window.location.href = "waiting";
 
-function cargarSegundo(){
-    let txtSegundos;
+  }
+}, 1000);
 
-    if(segundos < 0){
-        segundos = 59;
-    }
-
-
-    if(segundos < 10){
-        txtSegundos = `0${segundos}`;
-    }else{
-        txtSegundos = segundos;
-    }
-    document.getElementById('segundos').innerHTML = txtSegundos;
-    segundos--;
-
-    cargarMinutos(segundos);
+function displayTime(second) {
+  const min = Math.floor(second / 60);
+  const sec = Math.floor(second % 60);
+  timeH.innerHTML = `
+  ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
+  `;
 }
 
-function cargarMinutos(segundos){
-    let txtMinutos;
-
-    if(segundos == -1 && minutos !== 0){
-        setTimeout(() =>{
-            minutos--;
-        },2)
-    }else if(segundos == -1 && minutos == 0){
-        setTimeout(() =>{
-            minutos = 2;
-        },1000)
-    }
-
-
-    if(minutos < 10){
-        txtMinutos = `0${minutos}`;
-    }else{
-        txtMinutos = minutos;
-    }
-    document.getElementById('minutos').innerHTML = txtMinutos;
-    (segundos,minutos);
-}
-
-
-function paraTiempo(){
-clearInterval(cargarSegundo())
+function endCount() {
+  timeH.innerHTML = "Time out";
 }
 
 
 
+const touchButton = document.querySelector(".float-text");
+const card = document.querySelector(".float-card-info");
+const close = document.querySelector(".gg-close-r");
+
+touchButton.addEventListener("click", moveCard);
+close.addEventListener("click", moveCard);
+
+function moveCard() {
+  card.classList.toggle("active");
+}

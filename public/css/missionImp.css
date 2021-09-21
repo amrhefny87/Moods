@@ -19,15 +19,41 @@
 .selectCharacter {
     height: 25vh;
 }
+
+.selectCharacter:hover{
+    -moz-transform: scale(1.2) translate(13px, -4px) skew(14deg, 5deg);
+    -webkit-transform: scale(1.2) translate(13px, -4px) skew(14deg, 5deg);
+    -o-transform: scale(1.2) translate(13px, -4px) skew(14deg, 5deg);
+    -ms-transform: scale(1.2) translate(13px, -4px) skew(14deg, 5deg);
+    transform: scale(1.2) translate(13px, -4px) skew(14deg, 5deg);
+    }
+
 h3 {
     color: white;
     position: relative;
     top: 6vh;
 }
+
+h3:hover{
+    color: #FFFFFF;
+background: #FFFFFF;
+text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+color: #FFFFFF;
+background: #FFFFFF;
+}
+h1{
+color: white;
+}
 p {
     color: white;
     margin-bottom: 0;
     text-align: center;
+}
+
+p:hover{
+    text-shadow: -5px 5px 0px #00e6e6, -10px 10px 0px #01cccc, -15px 15px 0px #00bdbd, 2px 2px 2px rgba(206,89,55,0.03);
+color: #FFFFFF;
+background: #005DFF;
 }
 .impostorTitle {
     width: 60vw;
