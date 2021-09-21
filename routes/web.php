@@ -30,14 +30,15 @@ Route::get('/intro', [HomeController::class, 'intro'])->middleware('auth')->name
 Route::get('/mission', [HomeController::class, 'mission'])->middleware('auth')->name('mission');
 
 
-Route::get('/characters', function () {
-    return view('characters');
+// Route::get('/characters', function () {
+//     return view('characters');
+// })->name('characters');
 
-});
+Route::get('/characters', [UserController::class, 'characters'])->name('characters');
 
 Route::get('/map', function () {
     return view('map');
-});
+})->name('map');
 
 
 
@@ -58,11 +59,14 @@ Route::get('/users_unlink/{id}', [App\Http\Controllers\UserController::class, 'r
 Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('usersList');
 
 Route::get('/impostor', [App\Http\Controllers\UserController::class, 'chooseTheImpostor'])->name('chooseTheImpostor');
+Route::get('/startGame', [UserController::class, 'startGame'])->name('startGame');
+Route::get('/getCharacter', [UserController::class, 'getCharacter'])->name('getCharacter');
+Route::get('/redirectUsers', [UserController::class, 'redirectUsers'])->name('redirectUsers');
 
 
 
-
-Route::get('/admin', [AdminController::class, 'index'] )->middleware('auth.admin')->name('admin.index');
+Route::get('/admin', [AdminController::class, 'index'])->middleware('auth.admin')->name('admin.index');
+Route::get('/imp',[UserController::class,'impostor'])->name('impostor');
 
 
 Route::get('/chat', function() {

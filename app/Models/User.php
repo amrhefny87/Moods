@@ -23,7 +23,8 @@ class User extends Authenticatable
         'password',
         'is_admin',
         'impostor',
-        'group_id'
+        'group_id',
+        'character_id'
     ];
 
     /**
