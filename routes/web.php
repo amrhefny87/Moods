@@ -22,22 +22,25 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/waiting', [HomeController::class, 'index'])->middleware('auth')->name('waiting');
  //* Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
 Route::get('/intro', [HomeController::class, 'intro'])->middleware('auth')->name('intro');
-Route::get('/mission', [HomeController::class, 'mission'])->middleware('auth')->name('mission');
+Route::get('/mission1', [HomeController::class, 'mission1'])->middleware('auth')->name('mission1');
+Route::get('/mission2', [HomeController::class, 'mission2'])->middleware('auth')->name('mission2');
+Route::get('/mission3', [HomeController::class, 'mission3'])->middleware('auth')->name('mission3');
+Route::get('/mission4', [HomeController::class, 'mission4'])->middleware('auth')->name('mission4');
+Route::get('/mission5', [HomeController::class, 'mission5'])->middleware('auth')->name('mission5');
+Route::get('/mission6', [HomeController::class, 'mission6'])->middleware('auth')->name('mission6');
 
 
-Route::get('/characters', function () {
-    return view('characters');
 
-});
+Route::get('/characters', [UserController::class, 'characters'])->name('characters');
 
 Route::get('/map', function () {
     return view('map');
-});
+})->name('map');
 
 
 
@@ -58,11 +61,14 @@ Route::get('/users_unlink/{id}', [App\Http\Controllers\UserController::class, 'r
 Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('usersList');
 
 Route::get('/impostor', [App\Http\Controllers\UserController::class, 'chooseTheImpostor'])->name('chooseTheImpostor');
+Route::get('/startGame', [UserController::class, 'startGame'])->name('startGame');
+Route::get('/getCharacter', [UserController::class, 'getCharacter'])->name('getCharacter');
+Route::get('/redirectUsers', [UserController::class, 'redirectUsers'])->name('redirectUsers');
+Route::get('/endGame', [UserController::class, 'endGame'])->name('endGame');
 
 
-
-
-Route::get('/admin', [AdminController::class, 'index'] )->middleware('auth.admin')->name('admin.index');
+Route::get('/admin', [AdminController::class, 'index'])->middleware('auth.admin')->name('admin.index');
+Route::get('/imp',[UserController::class,'impostor'])->name('impostor');
 
 
 Route::get('/chat', function() {
@@ -72,6 +78,6 @@ Route::get('/chat', function() {
 
 Route::get('/private-chat', function() {
     event(new \App\Events\PrivateMessage(auth()->user()));
-    dd('Private event executed successfully.');
+    dd('Canal privado.');
 });
 

@@ -57,10 +57,8 @@
                                 </div>
                         </form>
                         <div>
-                        <div>
-                        <a href="{{route('chooseTheImpostor')}}">Choose Impostor</a>
-                        </div>
-                        <a href="{{route('directUsers')}}">Start Game</a>
+                        <a href="{{route('startGame')}}">Start Game</a>
+                        <a href="{{route('endGame')}}">End Game</a>
                         </div>
                     </div>
                 <div class="d-flex flex-row justify-content-around">

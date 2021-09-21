@@ -1,9 +1,23 @@
-.waiting img{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
+.waiting{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sarpanch', sans-serif;
 }
 
 body{
+    background-image: url('../images/Download.gif');
+    background-size: 100% 100%;
     height: 100vh;
+    width: 100%;
+    background-size: cover;
+
 }
+
+.msg{
+    background: rgb(255, 255, 255, 0.2);
+    margin: auto;
+
+}
+
