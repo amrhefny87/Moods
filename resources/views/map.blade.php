@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="{{asset('css/map.css')}}" rel="stylesheet"/>
+<link href="{{secure_asset('css/map.css')}}" rel="stylesheet"/>
         <title>Laravel8</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -32,32 +32,32 @@
     <main class="main-center">
         <div  class="map-item item1">
             <button type="button"  class="fas fa-map-marker-alt">
-                <img class="ch0" src="{{ asset('images/Frame1.png') }} "/>
+                <img class="ch0" src="{{ secure_asset('images/Frame1.png') }} "/>
             </button>
         </div>
         <div  class="map-item item2">
             <button type="button"  class="fas fa-map-marker-alt">
-                <img class="ch0" src="{{ asset('images/Frame1.png') }} "/>
+                <img class="ch0" src="{{ secure_asset('images/Frame1.png') }} "/>
             </button>
         </div>
         <div  class="map-item item3">
             <button type="button"  class="fas fa-map-marker-alt">
-                <img class="ch0" src="{{ asset('images/Frame1.png') }} "/>
+                <img class="ch0" src="{{ secure_asset('images/Frame1.png') }} "/>
             </button>
         </div>
         <div  class="map-item item4">
             <button type="button"  class="fas fa-map-marker-alt">
-                <img class="ch0" src="{{ asset('images/Frame1.png') }} "/>
+                <img class="ch0" src="{{ secure_asset('images/Frame1.png') }} "/>
             </button>
         </div>
         <div  class="map-item item5">
             <button type="button"  class="fas fa-map-marker-alt">
-                <img class="ch0" src="{{ asset('images/Frame1.png') }} "/>
+                <img class="ch0" src="{{ secure_asset('images/Frame1.png') }} "/>
             </button>
         </div>
         <div  class="map-item item6">
             <button type="button"  class="fas fa-map-marker-alt">
-                <img class="ch0" src="{{ asset('images/Frame1.png') }} "/>
+                <img class="ch0" src="{{ secure_asset('images/Frame1.png') }} "/>
             </button>
         </div>
     </main>
@@ -74,7 +74,7 @@
     </footer>
 </div>
 
-<script src="{{asset('js/app.js')}}">
+<script src="{{secure_asset('js/app.js')}}">
 </script>
 </body>
 </html>
