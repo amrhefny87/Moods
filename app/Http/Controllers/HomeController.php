@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Grupo;
+use App\Models\Group;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -73,6 +73,15 @@ class HomeController extends Controller
         $character=$this->authCharacter();
         // dd($character);
         return view('mission5')->with('character',$character);
+    }
+
+    public function mission6(){
+        $user = auth()->user();
+        $group = Group::find($user->group_id);
+        $users = collect(User::all())->where('group_id', $group->id)->all();
+        $character=$this->authCharacter();
+        
+        return view('mission6')->with('users',$users)->with('character',$character);
     }
 
     public function create()

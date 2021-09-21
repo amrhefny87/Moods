@@ -140,9 +140,11 @@
       padding: 20vh;
   }
   .question {
-      width: 40vw;
+      min-width: 10vw;
+      min-height: 10vh;
       margin-bottom: 3vh;
       background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 1rem;
   }
   .time {
       background-color: rgba(255, 255, 255, 0.3);

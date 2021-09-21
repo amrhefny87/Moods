@@ -32,7 +32,7 @@ Route::get('/mission2', [HomeController::class, 'mission2'])->middleware('auth')
 Route::get('/mission3', [HomeController::class, 'mission3'])->middleware('auth')->name('mission3');
 Route::get('/mission4', [HomeController::class, 'mission4'])->middleware('auth')->name('mission4');
 Route::get('/mission5', [HomeController::class, 'mission5'])->middleware('auth')->name('mission5');
-
+Route::get('/mission6', [HomeController::class, 'mission6'])->middleware('auth')->name('mission6');
 
 
 
