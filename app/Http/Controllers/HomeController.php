@@ -36,8 +36,43 @@ class HomeController extends Controller
     public function intro(){
         return view('intro');
     }
-    public function mission(){
-        return view('mission');
+
+    public function authCharacter(){
+        $user = auth()->user();
+        $data = file_get_contents ('../characters.json');
+        $json_file = json_decode($data, true);
+        $characters=$json_file;
+
+        
+        $character= collect($characters)->where('id', $user->character_id)->first();
+        return ($character);
+    }
+    public function mission1(){
+        $character=$this->authCharacter();
+        // dd($character);
+        return view('mission1')->with('character',$character);
+    }
+
+
+    public function mission2(){
+        $character=$this->authCharacter();
+        // dd($character);
+        return view('mission2')->with('character',$character);
+    }
+    public function mission3(){
+        $character=$this->authCharacter();
+        // dd($character);
+        return view('mission3')->with('character',$character);
+    }
+    public function mission4(){
+        $character=$this->authCharacter();
+        // dd($character);
+        return view('mission4')->with('character',$character);
+    }
+    public function mission5(){
+        $character=$this->authCharacter();
+        // dd($character);
+        return view('mission5')->with('character',$character);
     }
 
     public function create()

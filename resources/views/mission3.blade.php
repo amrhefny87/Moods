@@ -23,26 +23,13 @@
     <div class="cover-contain">
         {{-- <img class="selectCharacter" src="require('../../../public/storage/images/ch1.png').default"/> --}}
 
-        <img class="selectCharacter" src="{{ asset('images/ch1.png') }} "/>
+        <img class="selectCharacter" src="{{ asset($character["image"]) }} "/>
 
 
         <div class="titleBig d-flex justify-content-center align-items-center">
-            <h3>Señala cuál de estas son estrategias de los videojuegos para engancharnos!</h3>
+            <h3>¿Cómo puedo darme cuenta de que un amigo/a tiene un problema con los videojuegos? </h3>
         </div>
-        <div class="containerQuestions">
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
-                <p>Premios instantáneos</p>
-            </div>
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
-                <p>Poder jugar varios modos e infinito</p>
-            </div>
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
-                <p>Compras dentro del videojuego para mejorar y llegar más alto</p>
-            </div>
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
-                <p>El precio inicial del juego</p>
-            </div>
-        </div>
+        
         <button onclick="nextQuestion()" class="buttonNext">NEXT</button>
     </div>
     <script src="{{asset('js/mission.js')}}"></script>

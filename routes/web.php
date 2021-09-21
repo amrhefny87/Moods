@@ -27,12 +27,14 @@ Route::get('/', function () {
 Route::get('/waiting', [HomeController::class, 'index'])->middleware('auth')->name('waiting');
  //* Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
 Route::get('/intro', [HomeController::class, 'intro'])->middleware('auth')->name('intro');
-Route::get('/mission', [HomeController::class, 'mission'])->middleware('auth')->name('mission');
+Route::get('/mission1', [HomeController::class, 'mission1'])->middleware('auth')->name('mission1');
+Route::get('/mission2', [HomeController::class, 'mission2'])->middleware('auth')->name('mission2');
+Route::get('/mission3', [HomeController::class, 'mission3'])->middleware('auth')->name('mission3');
+Route::get('/mission4', [HomeController::class, 'mission4'])->middleware('auth')->name('mission4');
+Route::get('/mission5', [HomeController::class, 'mission5'])->middleware('auth')->name('mission5');
 
 
-// Route::get('/characters', function () {
-//     return view('characters');
-// })->name('characters');
+
 
 Route::get('/characters', [UserController::class, 'characters'])->name('characters');
 
