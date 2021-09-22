@@ -77,7 +77,7 @@
       position: absolute;
       right: 20px;
       bottom: 20px;
-      opacity: 0;
+      opacity: 0.8;
       transition: opacity 5s linear;
   }
   .red {
@@ -88,8 +88,8 @@
       opacity: 0;
       right: 20px;
       top: 20px;
-      border-radius: 20px;
-      border: rgba(255, 255, 255, 0.5) solid;
+      border-radius: 50%;
+      border: rgba(255, 255, 255, 0.2) solid;
       transition: opacity 10s linear;
   }
   .containerQuestions {
@@ -101,8 +101,6 @@
   }
   .cover-contain{
           background-image: url('../images/impostor.png');
-
-
           background-size: 100% 100%;
           height: 100vh;
           width: 100%;
@@ -115,17 +113,14 @@
           font-family: 'Sarpanch', sans-serif;
       }
   .selectCharacter {
-      height: 25vh;
+      height: 25%;
       margin: 3vh;
   }
   h3 {
       color:white;
       text-align: center;
   }
-  p {
-      color: white;
-      margin-bottom:0;
-  }
+
    .titleSmall {
       width: 60vw ;
       border-radius: 1rem;
@@ -146,7 +141,16 @@
       min-height: 10vh;
       margin-bottom: 3vh;
       background-color: rgba(255, 255, 255, 0.5);
+      font-size:  1rem;
       border-radius: 1rem;
+      justify-content: center
+      
+  }
+  .question p {
+      color: white;
+      margin-bottom:0;
+      font-size: 1.5rem;
+      padding: 0.5rem !important;
   }
   .time {
       background-color: rgba(255, 255, 255, 0.3);
@@ -174,6 +178,10 @@
                 height: 11vh;
                 margin: 0vh;
             }
+            .question p{
+                font-size: 0.9rem;
+            }
+          
             .cover-contain {
                 
                 background-size: 100% 100%;
@@ -187,6 +195,9 @@
                 justify-content: center;
                 align-items: center;
                 font-family: 'Sarpanch', sans-serif;
+            }
+            .p{
+                font-size: 0.8rem;
             }
             }
 
@@ -210,6 +221,7 @@
                 align-items: center;
                 font-family: 'Sarpanch', sans-serif;
             }
+           
             }
 
             @media (max-width: 452px){
