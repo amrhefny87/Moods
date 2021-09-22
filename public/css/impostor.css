@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+.container-imp{
+    background-image: url('../images/impostor.png');
+    background-size: 100% 100%;
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h1{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 65%;
+    height: 17vh;
+    display: flex;
+    margin-top: 6vh;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p{
+    font-size:30px;
+    text-align:center;
+}
+.person{
+    display:flex;
+    flex-direction: column;
+    margin-top: 19vh;
+}
+.person img:hover{
+    -moz-transform: scale(1.2) translate(13px, -4px) skew(14deg, 5deg);
+    -webkit-transform: scale(1.2) translate(13px, -4px) skew(14deg, 5deg);
+    -o-transform: scale(1.2) translate(13px, -4px) skew(14deg, 5deg);
+    -ms-transform: scale(1.2) translate(13px, -4px) skew(14deg, 5deg);
+    transform: scale(1.2) translate(13px, -4px) skew(14deg, 5deg);
+}
+
+p:hover{
+    text-shadow: -5px 5px 0px #00e6e6, -10px 10px 0px #01cccc, -15px 15px 0px #00bdbd, 2px 2px 2px rgba(206,89,55,0.03);
+color: #FFFFFF;
+background: #005DFF;
+}
+
+h1:hover{
+    color: #FFFFFF;
+background: #FFFFFF;
+text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+color: #FFFFFF;
+background: #FFFFFF;
+}

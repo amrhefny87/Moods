@@ -6,8 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="{{ asset('css/characters.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/mission.css') }}" rel="stylesheet" />
     <title>Laravel8</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -16,33 +15,25 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
 
-
-
-
-
-
+  
 </head>
 
-<body class="containerCharacters">
+<body>
+    <div class="cover-contain">
+        {{-- <img class="selectCharacter" src="require('../../../public/storage/images/ch1.png').default"/> --}}
 
-    <div class="who-are-you container ">
-        <img class="ch0" src="{{ asset('images/character0.jpg') }} " />
-        <h2>Who are you?</h2>
+        <img class="selectCharacter" src="{{ asset($character["image"]) }} "/>
+
+
+        <div class="titleBig d-flex justify-content-center align-items-center">
+            <h3>¿Evadirse de los problemas jugando es bueno?</h3>
+        </div>
         
+        <button onclick="nextQuestion()" class="buttonNext">NEXT</button>
     </div>
-    
-    <div>
-        <img class="ch0" src="{{asset($character["image"])}}"/>
-        <p>Eres: {{$character["name"]}}</p>
-        @csrf
-        @if ($user->impostor === 1)
-            <p>eres el impostor</p>
-        @endif
-    </div>
-    <a href="{{route('map')}}">next</a>
-    <script src="{{asset('js/characteres.js')}}"></script>
-</body>
+    <script src="{{asset('js/mission.js')}}"></script>
+    </body>
 
-</html>
+    </html>
+   
