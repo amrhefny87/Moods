@@ -83,6 +83,18 @@ class HomeController extends Controller
         
         return view('mission6')->with('users',$users)->with('character',$character);
     }
+    public function map(){
+        return view('map');
+    }
+
+    public function missionImp(){
+        return view('missionImp');
+    }
+
+    public function impostor(){
+        return view('impostor');
+    }
+
 
     public function create()
     {

@@ -32,8 +32,8 @@
     </div>
 
     <div class="caontainer" id="app">
-        <h1 class="text-muted">Laravel Broadcast Redis Socket.IO</h1>
-        <div id="chat-notification"></div>
+        <!-- <h1 class="text-muted">Laravel Broadcast Redis Socket.IO</h1>
+        <div id="chat-notification"></div> -->
     </div>
 
     <script>

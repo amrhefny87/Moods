@@ -33,7 +33,9 @@
         border-radius: 10px;
         border-style: none;
         background: transparent;
+        font-family: 'Sarpanch', sans-serif;
     }
+    
     .cover-contain .play {
         font-size: 32px;
         color: white;
@@ -42,7 +44,39 @@
         width: 240px;
         height: 93px;
         background: transparent;
+        font-family: 'Sarpanch', sans-serif;
+
     }
+    .mood{
+ cursor: pointer;
+color: #FFFFFF;
+background: #FFFFFF;
+text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+color: #FFFFFF;
+background: #FFFFFF;
+    }
+
+    .mood:hover{
+        -moz-transform: rotate(8deg) translate(16px, -5px) skew(4deg, -10deg);
+        -webkit-transform: rotate(8deg) translate(16px, -5px) skew(4deg, -10deg);
+        -o-transform: rotate(8deg) translate(16px, -5px) skew(4deg, -10deg);
+        -ms-transform: rotate(8deg) translate(16px, -5px) skew(4deg, -10deg);
+        transform: rotate(8deg) translate(16px, -5px) skew(4deg, -10deg);
+    }
+
+    .play{
+ cursor: pointer;
+ font-size: 1rem;
+ color: #e0dfdc;
+background: #556677;
+text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0,0,0,0.9);
+color: #e0dfdc;
+background: #556677;
+    }
+.play:hover{
+    border: 9px double #1C6EA4;
+border-radius: 40px 0px 40px 40px;
+}
 @media (min-width: 992px){
 .container, .container-sm, .container-md, .container-lg {
     max-width: 1001px;
