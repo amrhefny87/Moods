@@ -32,12 +32,18 @@ Todas las versiones de este proyecto estan subidas a  [GITHUB](https://github.co
 
 _Equipo de desarrollo FATAAA.
 
-*[Andrea Cevallos Mendoza](https://www.linkedin.com/in/-andrea-c-m/)
-*[Andres Esteban Patiño Gomez](https://www.linkedin.com/in/estebanpati%C3%B1o/)
-*[Amr Hefny](https://www.linkedin.com/in/amr-hefny-5874811b2/)
-*[Thierno Diallo](https://www.linkedin.com/in/thierno-diallo-a22840174/)
-*[Franco Calviño](https://www.linkedin.com/in/franco-calvi%C3%B1o-b87059188/)
-*[Abdulha Idrees](https://www.linkedin.com/in/abdulha-idrees-195b051b7/)
+-[Andrea Cevallos Mendoza](https://www.linkedin.com/in/-andrea-c-m/)
+
+-[Andres Esteban Patiño Gomez](https://www.linkedin.com/in/estebanpati%C3%B1o/)
+
+-[Amr Hefny](https://www.linkedin.com/in/amr-hefny-5874811b2/)
+
+-[Thierno Diallo](https://www.linkedin.com/in/thierno-diallo-a22840174/)
+
+-[Franco Calviño](https://www.linkedin.com/in/franco-calvi%C3%B1o-b87059188/)
+
+-[Abdulha Idrees](https://www.linkedin.com/in/abdulha-idrees-195b051b7/)
+
 
 _En conjunto con el equipo de "NOUS CIMS"
 
