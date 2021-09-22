@@ -30,7 +30,8 @@
             <h3>¿Cómo puedo darme cuenta de que un amigo/a tiene un problema con los videojuegos? </h3>
         </div>
         
-        <button onclick="nextQuestion()" class="buttonNext">NEXT</button>
+        <a href="{{route('mission4')}}" class="buttonNext"><img class="next" src="{{ asset('images/next.png') }}" alt=""></a>
+
     </div>
     <script src="{{asset('js/mission.js')}}"></script>
     </body>

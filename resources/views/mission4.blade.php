@@ -43,7 +43,8 @@
                 <p>Ninguno de los anteriores</p>
             </div>
         </div>
-        <button onclick="nextQuestion()" class="buttonNext">NEXT</button>
+        <a href="{{route('mission5')}}" class="buttonNext"><img class="next" src="{{ asset('images/next.png') }}" alt=""></a>
+
     </div>
     <script src="{{asset('js/mission.js')}}"></script>
     </body>

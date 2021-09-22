@@ -38,7 +38,7 @@
                 <p class="myCharacter">Eres: {{$character["name"]}}</p>
                 @csrf
                 @if ($user->impostor === 1)
-                    <p>eres el impostor</p>
+                <p class="myCharacter">Eres el/la impostor</p>
                 @endif
             </div>
             

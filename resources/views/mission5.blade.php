@@ -29,7 +29,8 @@
         <div class="titleBig d-flex justify-content-center align-items-center">
             <h3>¿Si no tengo un problema con los videojuegos, pueden estos igualmente afectar mi estado de animo?</h3>
         </div>
-        <button onclick="nextQuestion()" class="buttonNext">NEXT</button>
+        <a href="{{route('missionImp')}}" class="buttonNext"><img class="next" src="{{ asset('images/next.png') }}" alt=""></a>
+
     </div>
     <script src="{{asset('js/mission.js')}}"></script>
     </body>

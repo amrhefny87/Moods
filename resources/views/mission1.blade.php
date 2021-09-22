@@ -29,8 +29,8 @@
         <div class="titleBig d-flex justify-content-center align-items-center">
             <h3>¿Evadirse de los problemas jugando es bueno?</h3>
         </div>
+        <a href="{{route('mission2')}}" class="buttonNext"><img class="next" src="{{ asset('images/next.png') }}" alt=""></a>
         
-        <button onclick="nextQuestion()" class="buttonNext">NEXT</button>
     </div>
     <script src="{{asset('js/mission.js')}}"></script>
     </body>
