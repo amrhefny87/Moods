@@ -26,22 +26,29 @@
 </head>
 
 <body class="containerCharacters">
-
-    <div class="who-are-you container ">
-        <img class="ch0" src="{{ asset('images/character0.jpg') }} " />
-        <h2>Who are you?</h2>
-        
+    <div class="characters-container">
+        <div class="who-are-you container ">
+            <img class="ch0" src="{{ asset('images/character0.jpg') }} " />
+            <h2>Who are you?</h2>
+            
+        </div>
+        <div>
+            <div class="user-ch">
+                <img class="ch1 mb-3" src="{{asset($character["image"])}}"/>
+                <p class="myCharacter">Eres: {{$character["name"]}}</p>
+                @csrf
+                @if ($user->impostor === 1)
+                    <p>eres el impostor</p>
+                @endif
+            </div>
+            
+        </div>
     </div>
-    
     <div>
-        <img class="ch0" src="{{asset($character["image"])}}"/>
-        <p>Eres: {{$character["name"]}}</p>
-        @csrf
-        @if ($user->impostor === 1)
-            <p>eres el impostor</p>
-        @endif
-    </div>
-    <a href="{{route('map')}}">next</a>
+        <a href="{{route('map')}}">
+            <img class="next" src="{{ asset('images/next.png') }}" alt="">
+        </a>
+    </div>  
     <script src="{{asset('js/characteres.js')}}"></script>
 </body>
 

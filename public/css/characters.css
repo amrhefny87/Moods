@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body {
-    font-family: 'Nunito', sans-serif;
-}
+
 .selectCharacter {
     width: 15vw;
     margin-right: 10px;
@@ -13,17 +12,19 @@ body {
 .containerCharacters {
     background-color: #202020;
     display: flex !important;
+    display: column;
     justify-content: space-around;
     margin-top: 20px;
-
 }
 .who-are-you{
-margin-left: 40px;
-margin-right: 40px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 30%;
+    max-width: 40%;
+    }
 
 .selection-characters{
     width: 100%;
@@ -38,6 +39,9 @@ justify-content: center;
 .ch0 {
     height: 80vh;
 }
+.ch1 {
+    height: 40vh;
+}
 p {
     color: white;
     font-size:  10px;
@@ -47,6 +51,7 @@ h2 {
     font-size: 20px;
     margin-left: 10%;
     margin-right: 10%;
+    
 }
 .icones{
     display: flex;
@@ -87,5 +92,26 @@ h2:hover{
     -o-transform: scale(1.3) translate(36px, -8px) skew(-3deg, 0deg);
     -ms-transform: scale(1.3) translate(36px, -8px) skew(-3deg, 0deg);
     transform: scale(1.3) translate(36px, -8px) skew(-3deg, 0deg);
+}
+
+.characters-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.myCharacter{
+    text-align: center !important;
+    font-size: 0.9rem;
+    
+
+}
+.user-ch{
+    align-items: center;
+}
+
+.next {
+    width: 5vw;
 }
 
