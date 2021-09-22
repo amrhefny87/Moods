@@ -45,7 +45,7 @@
         </div>
     </div>
     <div>
-        <a href="{{route('map')}}">
+        <a href="{{route('mission1')}}">
             <img class="next" src="{{ asset('images/next.png') }}" alt="">
         </a>
     </div>  

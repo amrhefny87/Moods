@@ -51,7 +51,7 @@ class HomeController extends Controller
         $user = auth()->user();
         $character=$this->authCharacter();
         // dd($character);
-        return view('mission1')->with('character',$character);
+        return view('mission1')->with('character',$character)->with('user',$user);
     }
 
 
@@ -101,8 +101,5 @@ class HomeController extends Controller
     }
 
 
-    public function create()
-    {
-        
-    }
+    
 }
