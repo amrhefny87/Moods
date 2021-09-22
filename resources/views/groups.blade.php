@@ -29,114 +29,92 @@
             }
         </style>
     </head>
-    <body class="group-view">
-    <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card-special-black">
-                <div class="container-fluid d-flex flex-wrap justify-content-around">
-                    <div class="create-group d-flex flex-row justify-content-center mb-3">
-                        <form method="POST" action="{{ route('groupsCreate') }}">
-                                @csrf
-
-                                <div class="d-flex flex-row justify-content-center">
-                                    
-
-                                    <div class="col-md-10">
-                                        <input type="text" class="form-control" name="name"  placeholder="Entra el nombre del grupo" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="submit" class="btn btn-outline-light">
-                                                Crea Grupo
-                                        </button>      
-                                    </div>
-                                </div>
-                        </form>
-                        
+    <body>
+        <header class="header-group mb-2">
+            <form method="POST" action="{{ route('groupsCreate') }}">
+                @csrf
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="name"  placeholder="Entra el nombre del grupo" required>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-outline-light">
+                                Crea Grupo
+                            </button>      
+                        </div>
                     </div>
-                    <div class="d-flex flex-row justify-content-around form">
-                        <div class="users m-3">
-                            <form method="POST" action="{{route('updateGroupId')}}">
-                            @csrf
-                
-                            <h2>Jugadores</h2>
+            </form>
+        </header>
+        <main class="main">
+            <div class="users-list my-2">
+                <form id="form" method="POST" action="{{route('updateGroupId')}}">
+                    @csrf
+                        <h2>Jugadores</h2>
                             @foreach ($users as $user)
                                 @if ($user->group_id === null && !$user->is_admin)
-                                <div class="d-flex justify-content-around">
-                                    <div class="mt-1">
-                                        <label>
-                                            <input type="checkbox"  value="{{$user->id}}" name="user[]">
-                                        </label>
+                                    <div class="d-flex justify-content-around">
+                                        <div class="mt-1">
+                                            <label>
+                                                <input type="checkbox"  value="{{$user->id}}" name="user[]">
+                                            </label>
+                                        </div>
+                                        <div class="users ml-3">
+                                            <p class="users-text text-white">{{$user->name}}</p>
+                                        </div>
                                     </div>
-                                    <div class="users ml-3">
-                                        <p class="users-text text-white">{{$user->name}}</p>
-                                    </div>
-                                </div>
                                 @endif
                             @endforeach
-                        </div>
-                        <div class="groups m-3">
-                        <h2>Grupos</h2>
-
-                        @foreach ($groups as $group)
-                        <div class="d-flex justify-content-around">
-                            <div class="mt-2">
-                                <label>
-                                    <input type="checkbox" value="{{$group->id}}" name="group[]">
-                                </label>
-                                
-                            </div>
-                            <div class="ml-3 mr-2">
-                                <p class="users-text text-white">{{$group->name}}</p>
-                            </div>
-                            <div>
-                            <a href="{{route('groupDelete',['id'=>$group->id])}}">remove group</a>
-                            </div>
-                        
-                            <div>   
-                        
-                                @foreach ($users as $user)
-                                    @if ($user->group_id == $group->id)
-                                
-                                    <div class="ml-3 mr-2">
-                                        <p class="users-text text-white">- {{$user->name}}</p>
-                                    </div>
-                                    <div class="ml-3 mr-2">
-                                        @if ($user->impostor == 1)
-                                            <p class="users-text text-danger">impostor</p>
-                                        @endif
-                                    </div>
-                                    <div>
-                                        <a href="{{route('removeGroupId',['id'=>$user->id])}}">remove</a>
-                                    </div>
-                                
-                                    @endif
-                                @endforeach
-                                </div>
-                        @endforeach
-                        
-                        
-                        </div>
-            
-                        <div>
-                            <input class="btn btn-outline-light" type="submit" value="Anade los jugadores">
-                        </div>
-                            
-                        </div>
                 
-                    </form>
-                
-                    
-                
-                    
-                </div>
-                <div>
-                        <a href="{{route('startGame')}}" class="btn btn-outline-light">Start Game</a>
-                        <a href="{{route('endGame')}}" class="btn btn-outline-light">End Game</a>
-                        </div>
-                </div>
             </div>
-        </div>
-    </div>
-</div>
+            <div class="groups-list mt-2">
+                        <div class="d-flex flex-row align-items-center">
+                            <h2>Grupos</h2>
+                            <h6 class="text-warning mr-3">Añade maximo 5 jugadores a cada grupo</h6>
+                            <input class="btn btn-outline-light" type="submit" value="Añade jugdores" form="form">
+                        </div>
+                            @foreach ($groups as $group)
+                                <div class="d-flex justify-content-around">
+                                    <div class="mt-2">
+                                        <label>
+                                            <input type="checkbox" value="{{$group->id}}" name="group[]">
+                                        </label>
+                                    </div>
+                                    <div class="users ml-3 mr-2">
+                                        <p class="users-text text-white">{{$group->name}}</p>
+                                    </div>
+                                    <div class="d-flex flex-start">
+                                        <a href="{{route('groupDelete',['id'=>$group->id])}}">remove group</a>
+                                    </div>
+                                </div>
+                                <div class="groups-users d-flex flex-column justify-content-around">
+                                    @foreach ($users as $user)
+                                        @if ($user->group_id == $group->id)
+                                        <div class="d-flex flex-row flext-start">
+                                            <div class="ml-3 mr-2 d-flex justifiy-content-left">
+                                                <p class="users text-white">- {{$user->name}}</p>
+                                            </div>
+                                            <div class="impostor ml-3 mr-2 d-flex justifiy-content-left">
+                                                @if ($user->impostor == 1)
+                                                    <p class="users-text text-danger">impostor</p>
+                                                @endif
+                                            </div>
+                                            <div>
+                                                <a href="{{route('removeGroupId',['id'=>$user->id])}}">remove</a>
+                                            </div>
+                                        </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            @endforeach
+                </form>
+
+            </div>
+            
+        </main>
+        <footer class="footer mt-2">
+            <div>
+                <a href="{{route('startGame')}}" class="btn btn-outline-light">Inicia El Juego</a>
+                <a href="{{route('endGame')}}" class="btn btn-outline-light">Termina El Juego</a>
+            </div>
+        </footer>
     </body>

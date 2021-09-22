@@ -1,4 +1,4 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('css/mission.css') }}" rel="stylesheet" />
-    <title>Laravel8</title>
+    <title>Mission 1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,8 +29,15 @@
         <div class="titleBig d-flex justify-content-center align-items-center">
             <h3>¿Evadirse de los problemas jugando es bueno?</h3>
         </div>
+        <div class="containerQuestions">
+            @if ($user->impostor == 1)
+            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+                <p class="text-danger">Convéncelos de que si, crea controversia.</p>
+            </div>
+            @endif
+        </div>
+        <a href="{{route('mission2')}}" class="buttonNext"><img class="next" src="{{ asset('images/next.png') }}" alt=""></a>
         
-        <button onclick="nextQuestion()" class="buttonNext">NEXT</button>
     </div>
     <script src="{{asset('js/mission.js')}}"></script>
     </body>

@@ -27,6 +27,7 @@ Route::get('/', function () {
 Route::get('/waiting', [HomeController::class, 'index'])->middleware('auth')->name('waiting');
  //* Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
 Route::get('/intro', [HomeController::class, 'intro'])->middleware('auth')->name('intro');
+Route::get('/characters', [UserController::class, 'characters'])->middleware('auth')->name('characters');
 Route::get('/mission', [HomeController::class, 'mission'])->middleware('auth')->name('mission');
 Route::get('/map', [HomeController::class, 'map'])->middleware('auth')->name('map');
 Route::get('/mission1', [HomeController::class, 'mission1'])->middleware('auth')->name('mission1');
@@ -34,29 +35,28 @@ Route::get('/mission2', [HomeController::class, 'mission2'])->middleware('auth')
 Route::get('/mission3', [HomeController::class, 'mission3'])->middleware('auth')->name('mission3');
 Route::get('/mission4', [HomeController::class, 'mission4'])->middleware('auth')->name('mission4');
 Route::get('/mission5', [HomeController::class, 'mission5'])->middleware('auth')->name('mission5');
-Route::get('/mission6', [HomeController::class, 'mission6'])->middleware('auth')->name('mission6');
-
-
-
-Route::get('/characters', [UserController::class, 'characters'])->name('characters');
-
-Route::get('/map', function () {
-    return view('map');
-})->name('map');
-
-
-
-
-Route::get('/create', [HomeController::class, "create"])->name('create');
-Route::get('/missionImp', [HomeController::class, "missionImp"])->name('missionImp');
-Route::get('/impostor', [HomeController::class, "impostor"])->name('impostor');
-
-
-
+Route::get('/missionImp', [HomeController::class, "missionImp"])->middleware('auth')->name('missionImp');
+// Route::get('/impostor', [HomeController::class, "impostor"])->name('impostor');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/imp',[UserController::class,'impostor'])->middleware('auth')->name('impostor');
 
 
-Route::get('/groups', [App\Http\Controllers\GroupController::class, 'index'])->name('groupsList');
+
+
+
+
+
+
+// Route::get('/create', [HomeController::class, "create"])->name('create');
+
+
+
+
+
+
+
+
+Route::get('/groups', [App\Http\Controllers\GroupController::class, 'index'])->middleware('auth.admin')->name('groupsList');
 Route::post('/groups', [App\Http\Controllers\GroupController::class, 'store'])->name('groupsCreate');
 Route::get('/groups/{id}', [App\Http\Controllers\GroupController::class, 'destroy'])->name('groupDelete');
 Route::put('/users/{id}', [App\Http\Controllers\UserController::class, 'updateImpostorStatus'])->name('updateImpostorStatus');
@@ -71,9 +71,8 @@ Route::get('/getCharacter', [UserController::class, 'getCharacter'])->name('getC
 Route::get('/redirectUsers', [UserController::class, 'redirectUsers'])->name('redirectUsers');
 Route::get('/endGame', [UserController::class, 'endGame'])->name('endGame');
 
-
 Route::get('/admin', [AdminController::class, 'index'])->middleware('auth.admin')->name('admin.index');
-Route::get('/imp',[UserController::class,'impostor'])->name('impostor');
+
 
 
 Route::get('/chat', function() {
