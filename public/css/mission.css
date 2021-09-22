@@ -101,8 +101,8 @@
   }
   .cover-contain{
           background-image: url('../images/impostor.png');
-       
-          
+
+
           background-size: 100% 100%;
           height: 100vh;
           width: 100%;
@@ -142,10 +142,11 @@
       padding: 20vh;
   }
   .question {
-      width: 46vw;
-      height: 8vh;
+      min-width: 10vw;
+      min-height: 10vh;
       margin-bottom: 3vh;
       background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 1rem;
   }
   .time {
       background-color: rgba(255, 255, 255, 0.3);

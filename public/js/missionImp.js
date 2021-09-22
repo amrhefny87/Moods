@@ -1,4 +1,4 @@
-let timeSecond = 90;
+let timeSecond = 10;
 const timeH = document.querySelector("h1");
 
 displayTime(timeSecond);

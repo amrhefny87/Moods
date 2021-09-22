@@ -1,0 +1,33 @@
+[
+    
+    {
+        "id": 1,
+        "name": "The Outlier",
+        "image": "images/ch1.png"
+
+    },
+    {
+        "id": 2,
+        "name": "The Stranger",
+        "image": "images/ch2.png"
+
+    },
+    {
+        "id": 3,
+        "name": "The Rebel",
+        "image": "images/ch3.png"
+
+    },
+    {
+        "id": 4,
+        "name": "The Saviour",
+        "image": "images/ch4.png"
+
+    },
+    {
+        "id": 5,
+        "name": "The Diva",
+        "image": "images/ch5.png"
+
+    }
+]
