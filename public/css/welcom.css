@@ -33,7 +33,9 @@
         border-radius: 10px;
         border-style: none;
         background: transparent;
+        font-family: 'Sarpanch', sans-serif;
     }
+    
     .cover-contain .play {
         font-size: 32px;
         color: white;
@@ -42,6 +44,8 @@
         width: 240px;
         height: 93px;
         background: transparent;
+        font-family: 'Sarpanch', sans-serif;
+
     }
 @media (min-width: 992px){
 .container, .container-sm, .container-md, .container-lg {
