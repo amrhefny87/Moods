@@ -42,6 +42,10 @@ class HomeController extends Controller
         return view('missionImp');
     }
 
+    public function impostor(){
+        return view('impostor');
+    }
+
 
     public function create()
     {

@@ -1,4 +1,4 @@
-let timeSecond = 10;
+let timeSecond = 90;
 const timeH = document.querySelector("h1");
 
 displayTime(timeSecond);
@@ -10,7 +10,7 @@ const countDown = setInterval(() => {
     endCount();
     clearInterval(countDown);
 
-    window.location.href = "waiting";
+     window.location.href = "impostor";
 
   }
 }, 1000);

@@ -100,7 +100,9 @@
 
   }
   .cover-contain{
-          background-image: url('../../../public/storage/images/hacker.jpg');
+          background-image: url('../images/impostor.png');
+       
+          
           background-size: 100% 100%;
           height: 100vh;
           width: 100%;
