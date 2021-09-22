@@ -28,6 +28,16 @@
             }
         </style>
     </head>
-    <body class="waiting">
-            <img src="{{ asset('images/download.gif') }} " alt="">
+    <body>
+            <div class="waiting">
+                
+                    <a href="{{route('redirectUsers')}}">Play</a>
+                    @if(!empty($waitMsg))
+                    <div class="msg"> 
+                        <p>{{$waitMsg}}</p>
+                    </div>
+                    @endif
+                
+            </div>
+            
     </body>
