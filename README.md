@@ -7,7 +7,12 @@ _Moods es un proyecto que busca hacer de un juego, una herramienta para psicólo
 _Para poder comenzar a jugar, tienes que registrarte con un nombre de usuario y tu email._
 ![image](https://user-images.githubusercontent.com/78723982/134329271-ed24ea91-6f2d-4774-a4eb-d1889a7a7c69.png)
 
- _Luego el administrador dividira a todos los users en distintos grupos de al rededor de 4/5 jugadores. Una vez que esten todos los grupos formados, comenzaran las trivias que deberan contestar en grupo, tratando de descrubrir con debates entre pregunta y pregunta quien es el "impostor" en el grupo y quiere desviar las respuestas correctas._
+ _Luego el administrador dividirá a todos los users en distintos grupos de al rededor de 4/5 jugadores._
+ ![image](https://user-images.githubusercontent.com/78723982/134329389-4a48ff53-c3ea-470f-98f8-f852a7811f6e.png)
+
+ _Una vez que estén todos los grupos formados, comenzaran las preguntas que deberán contestar en grupo, tratando de descubrir con debates entre pregunta y pregunta quien es el "impostor" en el grupo y quiere desviar las respuestas correctas._
+ 
+ 
 
 
 ## Construido con 🛠️
