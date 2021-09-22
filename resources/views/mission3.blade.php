@@ -21,7 +21,7 @@
 
 <body>
     <div class="cover-contain">
-        {{-- <img class="selectCharacter" src="require('../../../public/storage/images/ch1.png').default"/> --}}
+        
 
         <img class="selectCharacter" src="{{ asset($character["image"]) }} "/>
 

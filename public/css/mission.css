@@ -85,7 +85,6 @@
   }
   .selectCharacter{
       position: absolute;
-      opacity: 0;
       right: 20px;
       top: 20px;
       border-radius: 50%;
@@ -114,7 +113,6 @@
       }
   .selectCharacter {
       height: 25%;
-      margin: 3vh;
   }
   h3 {
       color:white;
@@ -161,23 +159,12 @@
       top: 40px
   }
 
-  @media (max-width: 1048px){
-    .selectCharacter {
-        height: 25vh;
-        margin: 1vh;
-    }
-    }
+
     @media (max-width: 955px){
-        .selectCharacter {
-            height: 16vh;
-            margin: 1vh;
-        }
+      
         }
         @media (max-width: 783px){
-            .selectCharacter {
-                height: 11vh;
-                margin: 0vh;
-            }
+         
             .question p{
                 font-size: 0.9rem;
             }
@@ -196,17 +183,12 @@
                 align-items: center;
                 font-family: 'Sarpanch', sans-serif;
             }
-            .p{
-                font-size: 0.8rem;
-            }
+            
             }
 
 
         @media (max-width: 608px){
-            .selectCharacter {
-                height: 11vh;
-                margin: 0vh;
-            }
+       
             .cover-contain {
                 
                 background-size: 100% 100%;
@@ -359,11 +341,7 @@
                                 text-align: center;
                                 font-size: 1rem;
                             }
-                            .selectCharacter {
-                                height: 10vh;
-                                margin: -1vh -5vh 0vh 0vh;
-
-                            }
+                   
                             }
                             @media (max-width: 221px){
 
@@ -411,11 +389,7 @@
                                     text-align: center;
                                     font-size: 0.7rem;
                                 }
-                                .selectCharacter {
-                                    height: 10vh;
-                                    margin: -1vh -5vh 0vh 0vh;
-
-                                }
+                            
                                 }
 
 

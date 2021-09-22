@@ -5,10 +5,10 @@
     padding: 0;
 }
 
-.selectCharacter {
-   /*  width: 15vw; */
+/* .selectCharacter {
+    width: 15vw;
     margin-right: 10px;
-}
+} */
 .containerCharacters {
     background-color: #202020;
     display: flex !important;
