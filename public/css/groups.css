@@ -3,6 +3,7 @@ body{
     background-image: url('../images/hacker.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    font-family: 'Sarpanch', sans-serif;
     
 }
 
@@ -16,7 +17,19 @@ body{
     font-family: 'Sarpanch', sans-serif;
 }
 
+.create-group {
+    width: 100%;
+}
 
+.form {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.users {
+    
+}
 
 
 

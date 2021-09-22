@@ -32,8 +32,8 @@
 
 <div class="container contenedor-login">
     <div class="row justify-content-center ">
-        <div class="col-md-8 r row d-flex justify-content-center">
-            <div class="card-body-login card  ">
+        <div class="col-md-8 justify-content-center">
+            <div class="card-body-login card  d-flex justify-content-center">
 
                 <div class="card-body formulario-card">
                     <form method="POST" action="{{ route('login') }}">
@@ -81,7 +81,7 @@
 
                         <div class="d-flex justify-content-center form-group row mb-0">
                             <div class=" col-md-8 offset-md-4 w-100">
-                                <button type="submit" class="btn btn-outline-light">
+                                <button type="submit" class="btn btn-outline-light mr-4">
                                     {{ __('Login') }}
                                 </button>
 
@@ -95,7 +95,7 @@
                     </form>
                 </div>
             </div>
-            <div>
+            <div class="d-flex flex-row justify-content-center">
             <a class="enlace-register" href="{{ route('register') }}"> <button class="btn btn-outline-light boton-create-account">crear cuenta nueva</button></a>
             </div>
         </div>
