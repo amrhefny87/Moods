@@ -28,10 +28,6 @@
             }
         </style>
     </head>
-<<<<<<< HEAD
-    <body class="waiting">
-            <img src="{{ secure_asset('images/download.gif') }} " alt="">
-=======
     <body>
     <div class="preloader mt-5">
         <div class="preloader__ring">
@@ -114,5 +110,4 @@
                 
             </div>
         
->>>>>>> dev
     </body>
