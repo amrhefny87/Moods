@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ secure_asset('css/mission.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/mission.css') }}" rel="stylesheet" />
     <title>Mission 2</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -23,11 +23,7 @@
     <div class="cover-contain">
         
 
-<<<<<<< HEAD:resources/views/mission.blade.php
-        <img class="selectCharacter" src="{{ secure_asset('images/ch1.png') }} "/>
-=======
         <img class="selectCharacter" src="{{ asset($character["image"]) }} "/>
->>>>>>> dev:resources/views/mission2.blade.php
 
 
         <div class="titleBig d-flex justify-content-center align-items-center">
@@ -58,7 +54,7 @@
         <a href="{{route('mission3')}}" class="buttonNext"><img class="next" src="{{ asset('images/next.png') }}" alt=""></a>
 
     </div>
-    <script src="{{secure_asset('js/mission.js')}}"></script>
+    <script src="{{asset('js/mission.js')}}"></script>
     </body>
 
     </html>
