@@ -27,7 +27,7 @@
   --warning: #ffed4a;
   --danger: #e3342f;
   --light: #f8f9fa;
-  --dark: #343a40;
+  --dark: #207ac4;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -62,7 +62,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8fafc;
+  background-color: #080808;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -369,7 +369,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: 1.575rem;
+  font-size: 1.5rem;
 }
 
 h4, .h4 {
@@ -4017,7 +4017,7 @@ input[type=button].btn-block {
   padding: 0.25rem 0.75rem;
   font-size: 1.125rem;
   line-height: 1;
-  background-color: transparent;
+  background-color: rgb(39, 39, 39);
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }

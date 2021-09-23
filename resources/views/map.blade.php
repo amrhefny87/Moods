@@ -29,7 +29,7 @@
     </head>
 <body>
 <div class="container-fluid cover-contain">
-    <main class="main-center">
+    <div class="main-center">
         <div  class="map-item item1">
             <button type="button"  class="fas fa-map-marker-alt">
                 <img class="ch0" src="{{ asset('images/Frame1.png') }} "/>
@@ -60,18 +60,8 @@
                 <img class="ch0" src="{{ asset('images/Frame1.png') }} "/>
             </button>
         </div>
-    </main>
-    <footer class="footer">
-        <div class="texto">
-            <p>
-                This is the map of the places we know your friend Sam use to
-                visit, the<br />
-                only hint we know at the first place is that she has been
-                dealing with<br />
-                illegal stuff about software,
-            </p>
         </div>
-    </footer>
+    
 </div>
 
 <script src="{{asset('js/app.js')}}">

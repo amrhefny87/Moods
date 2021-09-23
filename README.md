@@ -1,64 +1,59 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# MOODS
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+_Moods es un proyecto que busca hacer de un juego, una herramienta para psicólogos que tratan la adicción a las pantallas.Se basa en una novela policial que a través de preguntas logra que los usuarios generen debates para poder descubrir quien es el "impostor" dentro de su grupo y que finalidad tienen los videojuegos para generar una dependencia/adicción, así generar más consumo y rentabilidad.
 
-## About Laravel
+## Comenzando 🚀
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+_Para poder comenzar a jugar, tienes que registrarte con un nombre de usuario y tu email._
+![image](https://user-images.githubusercontent.com/78723982/134329271-ed24ea91-6f2d-4774-a4eb-d1889a7a7c69.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+ _Luego el administrador dividirá a todos los users en distintos grupos de al rededor de 4/5 jugadores._
+ ![image](https://user-images.githubusercontent.com/78723982/134329389-4a48ff53-c3ea-470f-98f8-f852a7811f6e.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ _Una vez que estén todos los grupos formados, comenzaran las preguntas que deberán contestar en grupo, tratando de descubrir con debates entre pregunta y pregunta quien es el "impostor" en el grupo y quiere desviar las respuestas correctas._
+ 
+ 
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Construido con 🛠️
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+_Estas son las herramientas que utilizamos para crear la aplicación_
 
-## Laravel Sponsors
+* [laravel](https://laravel.com/) - El framework web usado
+* [MySQL](https://www.mysql.com/) - Manejador de base de datos
+* [PHP](https://www.php.net/) - Lenguaje utilizado
+* [Pixabay](https://pixabay.com/es/) - Banco de imagenes
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+## Origen 📖
+Este proyecto se creo en el marco del Bootcamp de Factoria F5, como proyecto final y en colaboracion con el grupo [NOUS CIMS](https://www.nouscims.com/) 
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Versionado 📌
 
-## Code of Conduct
+Todas las versiones de este proyecto estan subidas a  [GITHUB](https://github.com/Fataaa-mood/moods-app).
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Autores ✒️
 
-## Security Vulnerabilities
+_Equipo de desarrollo FATAAA.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-[Andrea Cevallos Mendoza](https://www.linkedin.com/in/-andrea-c-m/)
 
-## License
+-[Andres Esteban Patiño Gomez](https://www.linkedin.com/in/estebanpati%C3%B1o/)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-[Amr Hefny](https://www.linkedin.com/in/amr-hefny-5874811b2/)
+
+-[Thierno Diallo](https://www.linkedin.com/in/thierno-diallo-a22840174/)
+
+-[Franco Calviño](https://www.linkedin.com/in/franco-calvi%C3%B1o-b87059188/)
+
+-[Abdulha Idrees](https://www.linkedin.com/in/abdulha-idrees-195b051b7/)
+
+
+_En conjunto con el equipo de "NOUS CIMS"
+
+_Pau Gomes_
+_Ania Perez Racana_
+
+
