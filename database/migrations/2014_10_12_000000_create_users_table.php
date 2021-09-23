@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->boolean('impostor')->default(false);
             $table->unsignedBigInteger('group_id')->nullable()->default(NULL);
             $table->foreign('group_id')->references('id')->on('groups')->onDelete('cascade');
+            $table->unsignedBigInteger('character_id')->nullable();
             
         });
 

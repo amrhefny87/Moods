@@ -3,6 +3,10 @@ body{
     background-image: url('../images/hacker.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    font-family: 'Sarpanch', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 }
 
@@ -14,9 +18,67 @@ body{
 .users-text {
     font-size:medium;
     font-family: 'Sarpanch', sans-serif;
+    max-width: 30vw;
 }
 
+.create-group {
+    width: 100%;
+}
 
+.form {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+}
 
+.header-group{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.users{
+    display: flex;
+    flex-direction: row !important;
+    min-width: 20vw;
+    max-width: 30vw;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    border: rgb(255, 255, 255) solid 1px;
+    border-radius: 1rem;
+    margin: auto;
+}
+
+.users-list{
+    width: 30%;
+}
+
+.impostor{
+    min-width: 20vw;
+}
+
+.groups-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+
+.groups-users{
+    margin-left: 3rem;
+}
 
 

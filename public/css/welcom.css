@@ -33,7 +33,10 @@
         border-radius: 10px;
         border-style: none;
         background: transparent;
+        font-family: 'Sarpanch', sans-serif;
+        text-shadow: 5px 5px 5px rgb(146, 143, 143);
     }
+    
     .cover-contain .play {
         font-size: 32px;
         color: white;
@@ -42,7 +45,67 @@
         width: 240px;
         height: 93px;
         background: transparent;
+        font-family: 'Sarpanch', sans-serif;
+        
+
     }
+
+    .play{
+        cursor: pointer;
+        font-size: 1rem;
+        color: #e0dfdc;
+        background: #556677;
+        text-shadow: 5px 5px 5px rgb(146, 143, 143);
+        color: #e0dfdc;
+        background: #556677;
+    }
+
+    .play:hover{
+        -moz-transform: scale(1.05) translate(5px, 5px);
+-webkit-transform: scale(1.05) translate(5px, 5px);
+-o-transform: scale(1.05) translate(5px, 5px);
+-ms-transform: scale(1.05) translate(5px, 5px);
+transform: scale(1.05) translate(5px, 5px);
+    }
+
+    .scale-down-ver-top {
+        -webkit-animation: scale-down-ver-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: scale-down-ver-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    @-webkit-keyframes scale-down-ver-top {
+        0% {
+            -webkit-transform: scaleY(0.0);
+            transform: scaleY(0.0);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+          
+        }
+
+        100% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+        }
+      }
+      @keyframes scale-down-ver-top {
+        0% {
+            -webkit-transform: scaleY(0.0);
+            transform: scaleY(0.0);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+          
+        }
+
+        100% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+        }
+      }
+
 @media (min-width: 992px){
 .container, .container-sm, .container-md, .container-lg {
     max-width: 1001px;

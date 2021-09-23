@@ -28,14 +28,14 @@
 <body>
     <div id="app">
         <div>
-            <nav class="navbar navbar-expand-md navbar-light shadow-sm bg-dark">
+            <nav class="navbar navbar-expand-md navbar-light shadow-sm">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <a class="navbar-brand text-white ml-3" href="{{ url('/') }}">Moods</a>
+                        <!-- <a class="navbar-brand text-white ml-3" href="{{ url('/') }}">Moods</a> -->
                     </ul>
                     
                     <!-- Right Side Of Navbar -->

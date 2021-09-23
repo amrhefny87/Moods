@@ -25,6 +25,7 @@
 
 </head>
 
+<<<<<<< HEAD
 <body class="containerCharacters" onload=" personSelect()">
 
     <div class="who-are-you container ">
@@ -34,6 +35,33 @@
     <div class="container selection-characters " id="root">
     </div>
     <script src="{{secure_asset('js/characteres.js')}}"></script>
+=======
+<body class="containerCharacters">
+    <div class="characters-container">
+        <div class="who-are-you container ">
+            <img class="ch0" src="{{ asset('images/character0.jpg') }} " />
+            <h2>Who are you?</h2>
+            
+        </div>
+        <div>
+            <div class="user-ch">
+                <img class="ch1 mb-3" src="{{asset($character["image"])}}"/>
+                <p class="myCharacter">Eres: {{$character["name"]}}</p>
+                @csrf
+                @if ($user->impostor === 1)
+                <p class="myCharacter">Eres el/la impostor</p>
+                @endif
+            </div>
+            
+        </div>
+    </div>
+    <div>
+        <a href="{{route('mission1')}}">
+            <img class="next" src="{{ asset('images/next.png') }}" alt="">
+        </a>
+    </div>  
+    <script src="{{asset('js/characteres.js')}}"></script>
+>>>>>>> dev
 </body>
 
 </html>

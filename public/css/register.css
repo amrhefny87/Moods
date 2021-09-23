@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
+
 .container-body-register{
     background-image: url('../images/Forest.gif');
     background-size: 100% 100%;
@@ -13,6 +15,10 @@
     -webkit-backdrop-filter: blur( 0px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    min-width: 30vw;
+    max-width: 40vw;
+    margin: auto;
+    font-family: 'Sarpanch', sans-serif;
 }
 
 .color-label{

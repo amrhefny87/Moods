@@ -21,6 +21,7 @@ class CreateGroupsTable extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('impostor_id')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
+            $table->boolean('ready')->default(false)->nullable();
             // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); 
         });
     }

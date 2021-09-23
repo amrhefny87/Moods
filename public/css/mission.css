@@ -2,31 +2,17 @@
     width: 10vw;
     height: 12vh;
     font-family: 'Bebas Neue', cursive;
-    background: linear-gradient(45deg, transparent 5%, #0b7745 5%);
+    
     border: 0;
     color: #fff;
     letter-spacing: 3px;
     line-height: 20px;
-    box-shadow: 6px 0px 0px #03532b;
+    
     outline: transparent;
     position: relative;
   }
-  .buttonNext::after {
-    content: 'AVAILABLE NOW';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 3%, #0b7745 3%, #0b7745 5%, #03532b 5%);
-    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #0b7745;
-    clip-path: inset(50% 50% 50% 50%);
-  }
-  .buttonNext:hover::after {
-    animation: 1s glitch;
-    animation-timing-function: steps(2, end);
-  }
+  
+  
   @keyframes glitch {
     0% {
       clip-path: inset(80% -6px 0 0);
@@ -77,19 +63,18 @@
       position: absolute;
       right: 20px;
       bottom: 20px;
-      opacity: 0;
-      transition: opacity 5s linear;
+      opacity: 0.8;
+
   }
   .red {
       border: red solid 1px;
   }
   .selectCharacter{
       position: absolute;
-      opacity: 0;
       right: 20px;
       top: 20px;
-      border-radius: 20px;
-      border: rgba(255, 255, 255, 0.5) solid;
+      border-radius: 50%;
+      border: rgba(255, 255, 255, 0.2) solid;
       transition: opacity 10s linear;
   }
   .containerQuestions {
@@ -100,7 +85,7 @@
 
   }
   .cover-contain{
-          background-image: url('../../../public/storage/images/hacker.jpg');
+          background-image: url('../images/impostor.png');
           background-size: 100% 100%;
           height: 100vh;
           width: 100%;
@@ -113,24 +98,20 @@
           font-family: 'Sarpanch', sans-serif;
       }
   .selectCharacter {
-      height: 25vh;
-      margin: 3vh;
+      height: 25%;
   }
   h3 {
       color:white;
       text-align: center;
   }
-  p {
-      color: white;
-      margin-bottom:0;
-  }
-  .titleSmall {
+
+   .titleSmall {
       width: 60vw ;
       border-radius: 1rem;
       background-color: rgba(255, 255, 255, 0.3);
       padding: 2vh;
       margin-bottom: 3vh;
-      transition: width 5s, height 5s, padding 5s, position 5s;
+      transition: width 3s, height 3s, padding 3s, position 3s;
   }
   .titleBig {
       position: absolute;
@@ -140,38 +121,96 @@
       padding: 20vh;
   }
   .question {
-      width: 40vw;
+      min-width: 10vw;
+      min-height: 10vh;
       margin-bottom: 3vh;
       background-color: rgba(255, 255, 255, 0.5);
+      font-size:  1rem;
+      border-radius: 1rem;
+      justify-content: center
+      
   }
-  .time {
-      background-color: rgba(255, 255, 255, 0.3);
-      border-radius: 0.5 rem;
-      width: 10vw;
-      position: absolute;
-      right: 40px;
-      top: 40px
+  .question p {
+      
+      margin-bottom:0;
+      font-size: 1.5rem;
+      padding: 0.5rem !important;
   }
 
-  @media (max-width: 1048px){
-    .selectCharacter {
-        height: 25vh;
-        margin: 1vh;
-    }
-    }
+  .question-impostor {
+    min-width: 10vw;
+    min-height: 10vh;
+    margin-bottom: 3vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size:  1rem;
+    border-radius: 1rem;
+    justify-content: center;
+    margin-bottom:0;
+    font-size: 1.5rem;
+    padding: 0.5rem !important;
+  }
+  .time {
+      background-color: rgba(255, 255, 255, 0.5);
+      
+      width: 10vw;
+      position: relative;
+      
+  }
+
+  .cont-temporizador{
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    /*   border: solid 1px red; */
+    margin-top: 15px;
+    border-radius: 1rem;
+
+}
+
+.cont-temporizador .bloque{
+margin: 0px 4px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.cont-temporizador .bloque div{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(80, 80, 80);
+box-shadow: 0px 0px 6px 2px #727272 inset;
+color: #ffffff;
+font-size: 20px;
+font-weight: bold;
+width: 45px;
+height: 59px;
+margin-bottom: 10px;
+border-radius: 5px;
+}
+
+.cont-temporizador .bloque p{
+font-size: 11px;
+font-weight: bold;
+color: #d6d6d6;
+}
+
+  .impostor-name {
+      font-size: 20px;
+  }
+
+
     @media (max-width: 955px){
-        .selectCharacter {
-            height: 16vh;
-            margin: 1vh;
-        }
+      
         }
         @media (max-width: 783px){
-            .selectCharacter {
-                height: 11vh;
-                margin: 0vh;
+         
+            .question p{
+                font-size: 0.9rem;
             }
+          
             .cover-contain {
-                background-image: url(../../../public/storage/images/hacker.jpg);
+                
                 background-size: 100% 100%;
                 height: 98vh;
                 width: 104%;
@@ -184,16 +223,14 @@
                 align-items: center;
                 font-family: 'Sarpanch', sans-serif;
             }
+            
             }
 
 
         @media (max-width: 608px){
-            .selectCharacter {
-                height: 11vh;
-                margin: 0vh;
-            }
+       
             .cover-contain {
-                background-image: url(../../../public/storage/images/hacker.jpg);
+                
                 background-size: 100% 100%;
                 height: 98vh;
                 width: 105%;
@@ -206,12 +243,13 @@
                 align-items: center;
                 font-family: 'Sarpanch', sans-serif;
             }
+           
             }
 
             @media (max-width: 452px){
-               
+
                 .cover-contain {
-                    background-image: url(../../../public/storage/images/hacker.jpg);
+                 
                     background-size: 100% 100%;
                     height: 106vh;
                     width: 108%;
@@ -246,13 +284,13 @@
                     line-height: 20px;
                     box-shadow: 6px 0px 0px #03532b;
                     outline: transparent;
-                   
+
                 }
                 }
                 @media (max-width: 518px){
-               
+
                     .cover-contain {
-                        background-image: url(../../../public/storage/images/hacker.jpg);
+                       
                         background-size: 100% 100%;
                         height: 106vh;
                         width: 108%;
@@ -267,9 +305,9 @@
                     }
                     }
                     @media (max-width: 404px){
-               
+
                         .cover-contain {
-                            background-image: url(../../../public/storage/images/hacker.jpg);
+                            
                             background-size: 100% 100%;
                             height: 109vh;
                             width: 114%;
@@ -295,13 +333,13 @@
                             line-height: 20px;
                             box-shadow: 6px 0px 0px #03532b;
                             outline: transparent;
-                            
+
                         }
                         }
                         @media (max-width: 374px){
-               
+
                             .cover-contain {
-                                background-image: url(../../../public/storage/images/hacker.jpg);
+                                
                                 background-size: 100% 100%;
                                 height: 106vh;
                                 width: 108%;
@@ -336,23 +374,19 @@
                                 line-height: 20px;
                                 box-shadow: 6px 0px 0px #03532b;
                                 outline: transparent;
-                               
+
                             }
                             h3 {
                                 color: white;
                                 text-align: center;
                                 font-size: 1rem;
                             }
-                            .selectCharacter {
-                                height: 10vh;
-                                margin: -1vh -5vh 0vh 0vh;
-                             
-                            }
+                   
                             }
                             @media (max-width: 221px){
-               
+
                                 .cover-contain {
-                                    background-image: url(../../../public/storage/images/hacker.jpg);
+                                
                                     background-size: 100% 100%;
                                     height: 128vh;
                                     width: 128%;
@@ -388,37 +422,32 @@
                                     line-height: 20px;
                                     box-shadow: 6px 0px 0px #03532b;
                                     outline: transparent;
-                                   
+
                                 }
                                 h3 {
                                     color: white;
                                     text-align: center;
                                     font-size: 0.7rem;
                                 }
-                                .selectCharacter {
-                                    height: 10vh;
-                                    margin: -1vh -5vh 0vh 0vh;
-                                 
+                            
                                 }
-                                }
-                
-            
-        
-                
-        
-    
-    
-            
-        
-        
-    
-    
-            
-    
 
 
-        
-    
-    
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

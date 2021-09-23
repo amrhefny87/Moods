@@ -22,18 +22,18 @@
     </head>
     <body >
  <div class="cover-contain ">
-        <button class="mood">Moods</button>
+        <button class="mood scale-down-ver-top">Moods</button>
         @if (Auth::check())
-            <a class="enlace-register" href="{{ route('waiting') }}"> <button class="play">Ready To Play</button></a>
+            <a class="enlace-register scale-down-ver-top" href="{{ route('waiting') }}"> <button class="play">Ready To Play</button></a>
         @else
-            <a class="enlace-register" href="{{ route('login') }}"> <button class="play">Ready To Play</button></a>
+            <a class="enlace-register scale-down-ver-top" href="{{ route('login') }}"> <button class="play">Ready To Play</button></a>
         @endif
 
     </div>
 
     <div class="caontainer" id="app">
-        <h1 class="text-muted">Laravel Broadcast Redis Socket.IO</h1>
-        <div id="chat-notification"></div>
+        <!-- <h1 class="text-muted">Laravel Broadcast Redis Socket.IO</h1>
+        <div id="chat-notification"></div> -->
     </div>
 
     <script>
