@@ -25,7 +25,7 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/waiting', [HomeController::class, 'index'])->middleware('auth')->name('waiting');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+ //* Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); */
 Route::get('/intro', [HomeController::class, 'intro'])->middleware('auth')->name('intro');
 Route::get('/characters', [UserController::class, 'characters'])->middleware('auth')->name('characters');
 Route::get('/mission', [HomeController::class, 'mission'])->middleware('auth')->name('mission');
@@ -47,7 +47,7 @@ Route::get('/imp',[UserController::class,'impostor'])->middleware('auth')->name(
 
 
 
-Route::get('/create', [HomeController::class, "create"])->name('create');
+// Route::get('/create', [HomeController::class, "create"])->name('create');
 
 
 
@@ -84,4 +84,3 @@ Route::get('/private-chat', function() {
     event(new \App\Events\PrivateMessage(auth()->user()));
     dd('Canal privado.');
 });
-
