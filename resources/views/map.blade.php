@@ -1,5 +1,3 @@
-@extends('layouts.app');
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -61,7 +59,26 @@
             </button>
         </div>
         </div>
-    
+
+        <footer class="footer">
+            <div class="buttones-footer">
+
+                <div class="contain-btn">
+                    <div>
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+
+                <div>
+                    <i class="fas fa-house-user"></i>
+                </div>
+
+            </div>
+
+
+
+            </div>
+        </footer>
+
 </div>
 
 <script src="{{asset('js/app.js')}}">

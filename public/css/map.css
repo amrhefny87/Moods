@@ -17,15 +17,18 @@
     justify-content: space-evenly;
     width: 100%;
     height: 80vh;
+    border: solid 1px black;
     top: 0;
 }
 .footer {
-    width: 100%;
-    height: 20vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
+
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        border: solid 2px white;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
 
 .texto > p{
     font-size: 1.5rem;
@@ -82,6 +85,19 @@
     position: relative;
     right: 69%;
     top: 58vh;
+    }
+    .fa-arrow-left,.fa-house-user
+    {
+        font-size: 1rem;
+        color: red;
+    }
+
+    .buttones-footer{
+        display: flex;
+    }
+
+    .contain-btn .fas{
+        font-size: 3rem;
     }
 
 
