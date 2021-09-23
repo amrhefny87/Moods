@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ asset('css/mission.css') }}" rel="stylesheet" />
+    <link href="{{ secure_asset('css/mission.css') }}" rel="stylesheet" />
     
     <title>Mission 6
     </title>
@@ -25,7 +25,7 @@
     <div class="cover-contain">
         {{-- <img class="selectCharacter" src="require('../../../public/storage/images/ch1.png').default"/> --}}
 
-        <img class="selectCharacter" src="{{ asset($character["image"]) }} "/>
+        <img class="selectCharacter" src="{{ secure_asset($character["image"]) }} "/>
 
 
         <div class="titleBig d-flex justify-content-center align-items-center">
@@ -46,8 +46,8 @@
         </div>
 
     </div>
-    <script src="{{asset('js/mission.js')}}"></script>
-    <script src="{{asset('js/missionImp.js')}}"></script>
+    <script src="{{secure_asset('js/mission.js')}}"></script>
+    <script src="{{secure_asset('js/missionImp.js')}}"></script>
     </body>
 
     </html>
