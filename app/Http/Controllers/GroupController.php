@@ -26,14 +26,7 @@ class GroupController extends Controller
             'name'=>request()->name
         ]);
         $group->save();
-        
         return redirect()->route('groupsList');
-        
-
-
-        
-
-
     }
 
     public function destroy($id){

@@ -14,48 +14,54 @@ class GroupsTest extends TestCase
 {
     use RefreshDatabase;
     /** @test */
-    public function a_group_can_be_created()
+    public function a_group_can_be_created_only_by_admin()
     {
         $this->withoutExceptionHandling();
+        $user = User::factory()->create([
+            'is_admin'=>1
+        ]);
+        $this->actingAs($user);
+        
         $response = $this->post('/groups', [
             'name'=>'test'
         ]);
-
-        $response->assertOk();
+        // $response->assertOk();
         $this->assertCount(1, Group::all());
-
         $group= Group::first();
-
         $this->assertEquals($group->name, 'test');
     }
 
     /** @test */
-    public function list_of_groups_can_be_retrieved()
+    public function list_of_groups_can_be_retrieved_only_by_admin()
     {
         $this->withoutExceptionHandling();
+        $user = User::factory()->create([
+            'is_admin'=>1
+        ]);
+        $this->actingAs($user);
         Group::factory(3)->create();
         $response = $this->get('/groups');
-        $response->assertOk();
+        // $response->assertOk();
         $groups = Group::all();
-        // $users = User::all();
-        // dd($users);
         $response->assertViewIs('groups');
         $response->assertViewHas('groups', $groups);
     }
 
     /** @test */
-    public function a_group_can_be_deleted()
+    public function a_group_can_be_deleted_only_by_admin()
     {
         $this->withoutExceptionHandling();
+        $user = User::factory()->create([
+            'is_admin'=>1
+        ]);
+        $this->actingAs($user);
         Group::factory(1)->create([
             'id'=>1
         ]);
         $response = $this->get('/groups');
-        //dd($response);
+        // $response->assertOk();
         $this->assertCount(1, Group::all());
-        
-        $response = $this->delete('/groups/1');
-        //dd($response);
+        $response = $this->get('/groups/1');
         $this->assertCount(0, Group::all());
     }
     

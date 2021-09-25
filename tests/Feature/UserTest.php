@@ -20,8 +20,6 @@ class UserTest extends TestCase
         $response->assertOk();
         $this->assertCount(3, User::all());
         $users = User::all();
-        // $response->assertViewIs('users');
-        // $response->assertViewHas('users', $users);
     }
 
     /** @test */
@@ -36,30 +34,30 @@ class UserTest extends TestCase
         $this->assertCount(1, User::all());
         
         $response = $this->put('/users/1', [
-            'impostor' => FALSE
+            'impostor' => 1
         ]);
 
         $user=User::first();
         
-        $this->assertEquals($user->impostor,0);
+        $this->assertEquals($user->impostor,1);
     }
 
     /** @test */
     public function a_user_can_be_added_to_a_group()
     {
         $this->withoutExceptionHandling();
-        $users[] = User::factory(3)->create();
-        $group[] = Group::factory(2)->create();
+        $users[] = User::factory(2)->create();
+        $group[] = Group::factory()->create();
 
-
+        
         $response = $this->post('/users_link', [
-            'users'=>$users[1]->id,
-            'group'=>$group[0]->id       
+            'user'=>$users[0][0],
+            'group'=>$group[0]["id"]       
         ]);
+        dd($response);
+        // $user = User::find($users[1]->id);
         
-        $user = User::find($users[1]->id);
-        
-        $this->assertEquals($user->group_id,1);
+        // $this->assertEquals($user->group_id,1);
 
     }
 

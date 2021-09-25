@@ -29,13 +29,9 @@ class UserController extends Controller
             $user = User::find($requests); 
             $user->group_id = $request->group[0];
             $user->save();
+            
         };
-        
-        
-        
-        
         return redirect()->route('groupsList');
-        
     }
 
     public function removeGroupId ($id){
