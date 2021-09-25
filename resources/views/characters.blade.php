@@ -29,7 +29,7 @@
     <div class="characters-container">
         <div class="who-are-you container ">
             <img class="ch0" src="{{ asset('images/character0.jpg') }} " />
-            <h2>Who are you?</h2>
+            <h2>Quien eres?</h2>
             
         </div>
         <div>
