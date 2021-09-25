@@ -31,10 +31,18 @@
     font-family: 'Sarpanch', sans-serif;
 }
 
+
 .color-label{
     color: white;
 }
 
 .password-forgot{
-    margin-left: -28px;
+    padding-left: 0;
+}
+
+@media (max-width: 783px){
+    .formulario-card{
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
 }
