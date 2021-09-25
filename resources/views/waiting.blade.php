@@ -29,6 +29,8 @@
         </style>
     </head>
     <body>
+@section('waiting')
+<div>
     <div class="preloader mt-5">
         <div class="preloader__ring">
             <div class="preloader__sector">L</div>
@@ -108,6 +110,6 @@
                     </div>
                     @endif
                 
-            </div>
-        
-    </body>
+    </div>
+</div>
+@endsection

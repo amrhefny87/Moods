@@ -22,13 +22,17 @@
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link href="{{ asset('css/characters.css') }}" rel="stylesheet">
     <link href="{{asset('css/intro.css')}}" rel="stylesheet">
+    <link href="{{asset('css/groups.css')}}" rel="stylesheet"/>
+    <link href="{{asset('css/waiting.css')}}" rel="stylesheet"/>
+    <link href="{{ asset('css/characters.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/mission.css') }}" rel="stylesheet" />
 </head>
 
 
 <body>
     <div id="app">
-        <div>
-            <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+        <div class="app-content mt-1">
+            <nav class="navbar navbar-expand-md navbar-light">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -77,6 +81,14 @@
             </nav>
         </div>
     </div>
+    <div class="section-groups">
+            @yield('groups')
+    </div>
+    <div class="section-waiting">
+            @yield('waiting')
+    </div>
+
+    <script src="{{asset('js/mission.js')}}"></script>
 </body>
 </html>
 
