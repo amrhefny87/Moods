@@ -3141,7 +3141,8 @@ input[type=button].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  font-family: "sarpanch";
+  color: white;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3885,6 +3886,7 @@ input[type=button].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  font-family: 'Sarpanch';
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -3999,6 +4001,8 @@ input[type=button].btn-block {
 .navbar-nav .dropdown-menu {
   position: static;
   float: none;
+  background-color:rgb(39, 39, 39);
+  
 }
 
 .navbar-text {

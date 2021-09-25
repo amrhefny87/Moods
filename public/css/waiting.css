@@ -205,3 +205,15 @@
     }
   }
 
+  @media (max-width: 783px){
+    .btn{
+        margin-top: 20px;
+    }
+    .navbar-toggler{
+      float: right !important;
+      margin-top: 11px;
+    }
+
+  }
+
+
