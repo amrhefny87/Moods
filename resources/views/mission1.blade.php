@@ -13,6 +13,8 @@
         </div>
         <div class="containerQuestions">
             @if ($user->impostor == 1)
+
+            
             <div class="question d-flex align-items-center flex-column">
                 <p class="text-danger">Convéncelos de que si, crea controversia.</p>
             </div>
