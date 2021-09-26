@@ -28,7 +28,7 @@
   --warning: #ffed4a;
   --danger: #e3342f;
   --light: #f8f9fa;
-  --dark: #207ac4;
+  --dark: #343a40;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -63,7 +63,7 @@ body {
   line-height: 1.6;
 
   text-align: left;
-  /* background-color: #080808; */
+
   font-family: 'Sarpanch', sans-serif;
   height: 100%;
   
@@ -78,6 +78,7 @@ body {
   position: absolute;
   z-index: 2;
   right:0vh;
+
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -401,7 +402,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: 1.5rem;
+  font-size: 1.575rem;
 }
 
 h4, .h4 {
@@ -4049,7 +4050,7 @@ input[type=button].btn-block {
   padding: 0.25rem 0.75rem;
   font-size: 1.125rem;
   line-height: 1;
-  background-color: rgb(39, 39, 39);
+  background-color: transparent;
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
