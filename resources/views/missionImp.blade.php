@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -20,8 +21,12 @@
 
   
 </head>
+=======
+@extends('layouts.app')
+>>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
 
-<body>
+@section('missionImp')
+<div>
     <div class="cover-contain">
         {{-- <img class="selectCharacter" src="require('../../../public/storage/images/ch1.png').default"/> --}}
 
@@ -34,7 +39,7 @@
         <div class="containerQuestions d-flex flex-row">
             @csrf
                 @foreach ($users as $user)
-                <div onclick="borderActive($event)" class="question d-flex align-items-center justify-content-center mr-2">
+                <div class="question d-flex align-items-center justify-content-center mr-2">
                     <p>{{$user->name}}</p>
                 </div>
                 @endforeach
@@ -46,9 +51,13 @@
         </div>
 
     </div>
+<<<<<<< HEAD
     <script src="{{secure_asset('js/mission.js')}}"></script>
     <script src="{{secure_asset('js/missionImp.js')}}"></script>
     </body>
 
     </html>
+=======
+</div>
+>>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
    

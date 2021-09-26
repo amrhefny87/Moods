@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
 body{
-    background-image: url('../images/hacker.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    font-family: 'Sarpanch', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
+    
+    
+}
+.groups-container{
     
 }
 
 .users{
     width: 20vh;
+
     
 }
 
@@ -43,6 +42,7 @@ body{
     flex-direction: row !important;
     min-width: 20vw;
     max-width: 30vw;
+    font-size: 0.8rem;
 
 }
 

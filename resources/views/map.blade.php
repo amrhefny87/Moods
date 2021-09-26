@@ -1,5 +1,3 @@
-@extends('layouts.app');
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -42,7 +40,12 @@
         </div>
         <div  class="map-item item3">
             <button type="button"  class="fas fa-map-marker-alt">
+
+                <p>no hay mission</p>
+
+
                 <img class="ch0" src="{{ secure_asset('images/Frame1.png') }} "/>
+
             </button>
         </div>
         <div  class="map-item item4">
@@ -52,16 +55,42 @@
         </div>
         <div  class="map-item item5">
             <button type="button"  class="fas fa-map-marker-alt">
+
+                <p>no hay mission</p>
+
                 <img class="ch0" src="{{ secure_asset('images/Frame1.png') }} "/>
+
             </button>
         </div>
         <div  class="map-item item6">
             <button type="button"  class="fas fa-map-marker-alt">
+
+
                 <img class="ch0" src="{{ secure_asset('images/Frame1.png') }} "/>
+
             </button>
         </div>
         </div>
-    
+
+        <footer class="footer">
+            <div class="buttones-footer">
+
+                <div class="contain-btn">
+                    <button class="home fas fa-arrow-left">
+
+                    </button>
+
+                <button class="fas fa-house-user">
+
+                </button>
+
+            </div>
+
+
+
+            </div>
+        </footer>
+
 </div>
 
 <script src="{{secure_asset('js/app.js')}}">

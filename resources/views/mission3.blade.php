@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -20,6 +21,10 @@
 </head>
 
 <body>
+=======
+@section('mission2')
+<div>
+>>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
     <div class="cover-contain">
         
 
@@ -27,14 +32,19 @@
 
 
         <div class="titleBig d-flex justify-content-center align-items-center">
-            <h3>¿Cómo puedo darme cuenta de que un amigo/a tiene un problema con los videojuegos? </h3>
+            <h5>¿Cómo puedo darme cuenta de que un amigo/a tiene un problema con los videojuegos? </h5>
         </div>
         
         <a href="{{route('mission4')}}" class="buttonNext"><img class="next" src="{{ secure_asset('images/next.png') }}" alt=""></a>
 
     </div>
+<<<<<<< HEAD
     <script src="{{secure_asset('js/mission.js')}}"></script>
     </body>
 
     </html>
+=======
+</div>
+@endsection
+>>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
    

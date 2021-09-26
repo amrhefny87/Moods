@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -20,18 +21,22 @@
 </head>
 
 <body>
+=======
+@section('mission1')
+<div>
+>>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
     <div class="cover-contain">
-        {{-- <img class="selectCharacter" src="require('../../../public/storage/images/ch1.png').default"/> --}}
+        
 
         <img class="selectCharacter" src="{{ secure_asset($character["image"]) }} "/>
 
 
         <div class="titleBig d-flex justify-content-center align-items-center">
-            <h3>¿Evadirse de los problemas jugando es bueno?</h3>
+            <h5>¿Evadirse de los problemas jugando es bueno?</h5>
         </div>
         <div class="containerQuestions">
             @if ($user->impostor == 1)
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p class="text-danger">Convéncelos de que si, crea controversia.</p>
             </div>
             @endif
@@ -39,8 +44,13 @@
         <a href="{{route('mission2')}}" class="buttonNext"><img class="next" src="{{ secure_asset('images/next.png') }}" alt=""></a>
         
     </div>
+<<<<<<< HEAD
     <script src="{{secure_asset('js/mission.js')}}"></script>
     </body>
+=======
+    
+</div>
+@endsection
+>>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
 
-    </html>
    

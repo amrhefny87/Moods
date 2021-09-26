@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -20,6 +21,10 @@
 </head>
 
 <body>
+=======
+@section('mission2')
+<div>
+>>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
     <div class="cover-contain">
         {{-- <img class="selectCharacter" src="require('../../../public/storage/images/ch1.png').default"/> --}}
 
@@ -27,27 +32,32 @@
 
 
         <div class="titleBig d-flex justify-content-center align-items-center">
-            <h3>Que consecuencias puede generar el uso abusivo de los videojuegos y porque:</h3>
+            <h5>Que consecuencias puede generar el uso abusivo de los videojuegos y porque:</h5>
         </div>
         <div class="containerQuestions">
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p>Aislamiento</p>
             </div>
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p>Ira</p>
             </div>
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p>Insomnio</p>
             </div>
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p>Ninguno de los anteriores</p>
             </div>
         </div>
         <a href="{{route('mission5')}}" class="buttonNext"><img class="next" src="{{ secure_asset('images/next.png') }}" alt=""></a>
 
     </div>
+<<<<<<< HEAD
     <script src="{{secure_asset('js/mission.js')}}"></script>
     </body>
 
     </html>
+=======
+</div>
+@endsection
+>>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
    

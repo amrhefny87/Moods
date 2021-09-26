@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -20,6 +21,10 @@
 </head>
 
 <body>
+=======
+@section('mission2')
+<div>
+>>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
     <div class="cover-contain">
         
 
@@ -27,35 +32,40 @@
 
 
         <div class="titleBig d-flex justify-content-center align-items-center">
-            <h3>Señala cuál de estas son estrategias de los videojuegos para engancharnos!</h3>
+            <h5>Señala cuál de estas son estrategias de los videojuegos para engancharnos!</h5>
         </div>
         <div class="containerQuestions">
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
-                <p>Premios instantáneos</p>
+            <div class="question d-flex align-items-center flex-column">
+                <p class="text-answer">Premios instantáneos</p>
             </div>
             @if ($user->impostor == 1)
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p class="text-danger">Poder jugar varios modos e infinito</p>
             </div>
             @else
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p>Poder jugar varios modos e infinito</p>
             </div>
             @endif
 
 
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p>Compras dentro del videojuego para mejorar y llegar más alto</p>
             </div>
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p>El precio inicial del juego</p>
             </div>
         </div>
         <a href="{{route('mission3')}}" class="buttonNext"><img class="next" src="{{ secure_asset('images/next.png') }}" alt=""></a>
 
     </div>
+<<<<<<< HEAD
     <script src="{{secure_asset('js/mission.js')}}"></script>
     </body>
+=======
+>>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
 
-    </html>
+</div>
+@endsection
+
    

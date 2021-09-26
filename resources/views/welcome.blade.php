@@ -24,9 +24,9 @@
  <div class="cover-contain ">
         <button class="mood scale-down-ver-top">Moods</button>
         @if (Auth::check())
-            <a class="enlace-register scale-down-ver-top" href="{{ route('waiting') }}"> <button class="play">Ready To Play</button></a>
+            <a class="enlace-register scale-down-ver-top" href="{{ route('waiting') }}"> <button class="play">A Jugar</button></a>
         @else
-            <a class="enlace-register scale-down-ver-top" href="{{ route('login') }}"> <button class="play">Ready To Play</button></a>
+            <a class="enlace-register scale-down-ver-top" href="{{ route('login') }}"> <button class="play">A Jugar</button></a>
         @endif
 
     </div>
