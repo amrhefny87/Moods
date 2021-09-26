@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('mission')
+
 <div>
     <div class="cover-contain">
         
@@ -38,6 +38,6 @@
     </div>
 
 </div>
-@endsection
+
 
    
