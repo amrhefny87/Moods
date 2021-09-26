@@ -1,7 +1,9 @@
+
 @extends('layouts.app')
 @section('characters')
 <div class="characters">
 <div class="containerCharacters p-4">
+
     <div class="characters-container">
         <div class="who-are-you">
             <img class="ch0" src="{{ asset('images/character0.jpg') }} " />
