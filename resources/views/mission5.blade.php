@@ -9,7 +9,7 @@
 
 
         <div class="titleBig d-flex justify-content-center align-items-center">
-            <h4>¿Si no tengo un problema con los videojuegos, pueden estos igualmente afectar mi estado de animo?</h4>
+            <h6>¿Si no tengo un problema con los videojuegos, pueden estos igualmente afectar mi estado de animo?</h6>
         </div>
         <a href="{{route('missionImp')}}" class="buttonNext"><img class="next" src="{{ asset('images/next.png') }}" alt=""></a>
 

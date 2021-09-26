@@ -16,7 +16,7 @@
         <div class="containerQuestions d-flex flex-row">
             @csrf
                 @foreach ($users as $user)
-                <div onclick="borderActive($event)" class="question d-flex align-items-center justify-content-center mr-2">
+                <div class="question d-flex align-items-center justify-content-center mr-2">
                     <p>{{$user->name}}</p>
                 </div>
                 @endforeach

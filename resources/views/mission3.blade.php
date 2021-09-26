@@ -9,7 +9,7 @@
 
 
         <div class="titleBig d-flex justify-content-center align-items-center">
-            <h3>¿Cómo puedo darme cuenta de que un amigo/a tiene un problema con los videojuegos? </h3>
+            <h5>¿Cómo puedo darme cuenta de que un amigo/a tiene un problema con los videojuegos? </h5>
         </div>
         
         <a href="{{route('mission4')}}" class="buttonNext"><img class="next" src="{{ asset('images/next.png') }}" alt=""></a>

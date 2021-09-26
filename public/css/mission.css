@@ -85,13 +85,31 @@ body{
   }
   .containerQuestions {
       border: none !important;
-      opacity: 0;
-      visibility: hidden;
+      /* opacity: 0;
+      visibility: hidden; */
       width: 80%;
       /* transition: visibility 5s, opacity 10s linear; */
       margin-top: 35vh;
       justify-content: center;
+      animation-name: impostors;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
       
+    }
+    @keyframes impostors {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+      }
+    
+
+    .impostores{
+    
+        margin-top: 20vh;
     }
 
     
@@ -112,6 +130,14 @@ body{
   .selectCharacter {
       height: 25%;
   }
+  h6 {
+    color:white;
+    text-align: center;
+}
+  h5 {
+    color:white;
+    text-align: center;
+}
   h4 {
       color:white;
       text-align: center;
@@ -121,7 +147,7 @@ body{
     text-align: center;
 }
 
-   .titleSmall {
+   /* .titleSmall {
         position: absolute;
         top: 5vh;
       width: 70vw ;
@@ -130,15 +156,34 @@ body{
       padding: 2vh;
       margin-bottom: 3vh;
       transition: width 3s, height 3s, padding 3s, position 3s;
-  }
+  } */
   .titleBig {
       position: absolute;
       top: 20vh;
-      width: 80vw;
+      
+      
       border-radius: 1rem;
       background-color: rgba(255, 255, 255, 0.3);
-      padding: 20vh;
+      padding: 15vh;
+      animation-name: question;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
       
+  }
+
+  @keyframes question {
+    0% {
+        width: 90vw;
+        height: 50vh;
+        top: 20vh
+    }
+    
+    100% {
+        width: 60vw;
+        height: 5vh;
+        top: 5vh
+    }
   }
   .question {
       min-width: 10vw;
@@ -146,18 +191,18 @@ body{
       margin-bottom: 3vh;
       background-color: rgba(255, 255, 255, 0.5);
       font-size:  0.5rem;
-      border-radius: 1rem;
-      
-      text-align: center;
-      justify-content: center;
+    border-radius: 1rem;
+    
+    text-align: center;
+    justify-content: center;
       
   }
+  
 
 
-  .question p {
-      
-      margin-bottom:0;
-      font-size: 0.8rem;
+  .question p {  
+    margin-bottom:0;
+    font-size: 0.8rem;
       padding: 0.5rem !important;
   }
 
@@ -185,8 +230,7 @@ body{
     display: flex;
     justify-content: center;
     width: 15%;
-    /*   border: solid 1px red; */
-    margin-top: 15px;
+    margin-top: 10vh;
     border-radius: 1rem;
 
 }

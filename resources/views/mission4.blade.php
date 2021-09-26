@@ -9,19 +9,19 @@
 
 
         <div class="titleBig d-flex justify-content-center align-items-center">
-            <h4>Que consecuencias puede generar el uso abusivo de los videojuegos y porque:</h4>
+            <h5>Que consecuencias puede generar el uso abusivo de los videojuegos y porque:</h5>
         </div>
         <div class="containerQuestions">
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p>Aislamiento</p>
             </div>
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p>Ira</p>
             </div>
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p>Insomnio</p>
             </div>
-            <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
+            <div class="question d-flex align-items-center flex-column">
                 <p>Ninguno de los anteriores</p>
             </div>
         </div>
