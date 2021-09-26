@@ -40,7 +40,8 @@
         </div>
         <div  class="map-item item3">
             <button type="button"  class="fas fa-map-marker-alt">
-                <img class="ch0" src="{{ asset('images/Frame1.png') }} "/>
+                <p>no hay mission</p>
+
             </button>
         </div>
         <div  class="map-item item4">
@@ -50,12 +51,12 @@
         </div>
         <div  class="map-item item5">
             <button type="button"  class="fas fa-map-marker-alt">
-                <img class="ch0" src="{{ asset('images/Frame1.png') }} "/>
+                <p>no hay mission</p>
             </button>
         </div>
         <div  class="map-item item6">
             <button type="button"  class="fas fa-map-marker-alt">
-                <img class="ch0" src="{{ asset('images/Frame1.png') }} "/>
+
             </button>
         </div>
         </div>
@@ -64,13 +65,13 @@
             <div class="buttones-footer">
 
                 <div class="contain-btn">
-                    <div>
-                        <i class="fas fa-arrow-left"></i>
-                    </div>
+                    <button class="home fas fa-arrow-left">
 
-                <div>
-                    <i class="fas fa-house-user"></i>
-                </div>
+                    </button>
+
+                <button class="fas fa-house-user">
+
+                </button>
 
             </div>
 

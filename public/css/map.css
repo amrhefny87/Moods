@@ -17,17 +17,15 @@
     justify-content: space-evenly;
     width: 100%;
     height: 80vh;
-    border: solid 1px black;
     top: 0;
 }
 .footer {
 
-        width: 100%;
-        height: 20vh;
-        display: flex;
-        border: solid 2px white;
-        align-items: flex-end;
-        justify-content: flex-end;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     }
 
 .texto > p{
@@ -54,8 +52,11 @@
     right: 42%;
 }
 .map-item button img:hover{
+
     opacity: 3;
+
 }
+
 .main-center > .item1{
     position: relative;
     left: 10px;
@@ -89,15 +90,28 @@
     .fa-arrow-left,.fa-house-user
     {
         font-size: 1rem;
-        color: red;
+        color:white;
+        border-style: none;
+        background: transparent;
     }
 
     .buttones-footer{
+
         display: flex;
+    margin-right: 9px;
+    margin-bottom: 6px;
     }
 
     .contain-btn .fas{
-        font-size: 3rem;
+        font-size: 1.7rem;
+        margin-left: 27px;
+    }
+    .home{
+        margin-left: 5px;
+    }
+
+    .map-item button p{
+        display: none;
     }
 
 
