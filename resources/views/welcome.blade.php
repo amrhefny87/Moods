@@ -24,9 +24,9 @@
  <div class="cover-contain ">
         <button class="mood scale-down-ver-top">Moods</button>
         @if (Auth::check())
-            <a class="enlace-register" href="{{ route('waiting') }}"> <button class="play">Ready To Play</button></a>
+            <a class="enlace-register scale-down-ver-top" href="{{ route('waiting') }}"> <button class="play">Ready To Play</button></a>
         @else
-            <a class="enlace-register" href="{{ route('login') }}"> <button class="play">Ready To Play</button></a>
+            <a class="enlace-register scale-down-ver-top" href="{{ route('login') }}"> <button class="play">Ready To Play</button></a>
         @endif
 
     </div>
@@ -40,7 +40,7 @@
         window.laravelEchoPort = '{{ env("LARAVEL_ECHO_PORT") }}';
 </script>
 <script src="//{{ request()->getHost() }}:{{ env('LARAVEL_ECHO_PORT') }}/socket.io/socket.io.js"></script>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{asset('js/app.js') }}"></script>
 <script>
     const userId = '{{ auth()->id() }}';
     window.Echo.channel('public-message-channel')
@@ -55,7 +55,7 @@
 </script>
 
 
-       {{--  <script src="{{asset('js/app.js')}}">
+       {{--  <script src="{{secure_asset('js/app.js')}}">
         </script> --}}
     </body>
 </html>
