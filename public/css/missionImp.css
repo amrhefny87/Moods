@@ -16,6 +16,7 @@
     align-items: center;
     font-family: "Sarpanch", sans-serif;
 }
+
 .selectCharacter {
     height: 25vh;
 }
@@ -81,7 +82,7 @@ background: #005DFF;
 
 
 .cont-temporizador{
-            display: flex;
+        display: flex;
         justify-content: center;
         width: 15%;
       /*   border: solid 1px red; */

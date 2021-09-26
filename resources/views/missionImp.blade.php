@@ -13,7 +13,7 @@
         <div class="titleBig d-flex justify-content-center align-items-center">
             <h3>Elige al IMPOSTOR!</h3>
         </div>
-        <div class="containerQuestions">
+        <div class="containerQuestions d-flex flex-row">
             @csrf
                 @foreach ($users as $user)
                 <div onclick="borderActive($event)" class="question d-flex align-items-center justify-content-center mr-2">

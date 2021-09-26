@@ -88,9 +88,10 @@ body{
       opacity: 0;
       visibility: hidden;
       width: 80%;
-      transition: visibility 5s, opacity 10s linear;
+      /* transition: visibility 5s, opacity 10s linear; */
       margin-top: 35vh;
       justify-content: center;
+      
     }
 
     
@@ -146,7 +147,7 @@ body{
       background-color: rgba(255, 255, 255, 0.5);
       font-size:  0.5rem;
       border-radius: 1rem;
-      min-width: 30%;
+      
       text-align: center;
       justify-content: center;
       

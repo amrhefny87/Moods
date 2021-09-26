@@ -44,7 +44,7 @@ return [
         ],
 
         'mysql' => [
-            // 'engine' => 'innodb row_format=dynamic',
+            'engine' => 'innodb row_format=dynamic',
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
