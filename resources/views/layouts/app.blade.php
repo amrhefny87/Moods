@@ -87,8 +87,30 @@
     <div class="section-waiting">
             @yield('waiting')
     </div>
+    <div class="section-character">
+            @yield('characters')
+    </div>
+    <div class="section-mission">
+            @yield('mission1')
+    </div>
+    <div class="section-mission">
+            @yield('mission2')
+    </div>
+    <div class="section-mission">
+            @yield('mission3')
+    </div>
+    <div class="section-mission">
+            @yield('mission4')
+    </div>
+    <div class="section-mission">
+            @yield('mission5')
+    </div>
+    <div class="section-mission">
+            @yield('missionImp')
+    </div>
 
     <script src="{{asset('js/mission.js')}}"></script>
+    <script src="{{asset('js/missionImp.js')}}"></script>
 </body>
 </html>
 

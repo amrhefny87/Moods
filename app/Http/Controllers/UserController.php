@@ -76,12 +76,10 @@ class UserController extends Controller
         if ($group){
             if ($group->ready){
             return redirect()->route('characters');
-            }
-        }else{
-        return view('waiting')->with('waitMsg','El juego no esta listo, repite otra vez en un rato');
-        };
-
-
+            }else{
+            return view('waiting')->with('waitMsg','El juego no esta listo, repite otra vez en un rato');
+        }
+    }
     }
 
     public function getCharacter(){
@@ -118,11 +116,17 @@ class UserController extends Controller
         $data = file_get_contents ('../characters.json');
         $json_file = json_decode($data, true);
         $characters=$json_file;
-
+        
         
         $character= collect($characters)->where('id', $user->character_id)->first();
-        // dd($character->image);
-        return view('characters')->with('character',$character)->with('user',$user);
+        
+        if ($character){
+            return view('characters')->with('character',$character)->with('user',$user);
+        }else{
+            return view('waiting')->with('waitMsg','El juego no esta listo, repite otra vez en un rato');
+        }
+    
+        
     }
 
     public function impostor(){

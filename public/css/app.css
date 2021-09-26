@@ -69,7 +69,6 @@ body {
   
   
 }
-
 .app-content{
   height: 0vh;
   font-family: 'Sarpanch', sans-serif;
@@ -3183,7 +3182,7 @@ input[type=button].btn-block {
 .dropdown-item:hover, .dropdown-item:focus {
   color: #16181b;
   text-decoration: none;
-  background-color: #e9ecef;
+  background-color:transparent;
 }
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;

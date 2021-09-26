@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('mission')
+@section('mission1')
 <div>
     <div class="cover-contain">
         

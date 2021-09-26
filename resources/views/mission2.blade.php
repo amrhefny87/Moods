@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('mission')
+@section('mission2')
 <div>
     <div class="cover-contain">
         
@@ -13,7 +13,7 @@
         </div>
         <div class="containerQuestions">
             <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">
-                <p>Premios instantáneos</p>
+                <p class="text-answer">Premios instantáneos</p>
             </div>
             @if ($user->impostor == 1)
             <div onclick="borderActive($event)" class="question d-flex align-items-center flex-column">

@@ -25,12 +25,12 @@
                             @foreach ($users as $user)
                                 @if ($user->group_id === null && !$user->is_admin)
                                     <div class="d-flex justify-content-around">
-                                        <div class="ml-2">
+                                        <div class="mx-2">
                                             <label>
                                                 <input type="checkbox"  value="{{$user->id}}" name="user[]">
                                             </label>
                                         </div>
-                                        <div class="users mt-2">
+                                        <div class="users mt-1">
                                             <p class="users-text text-white">{{$user->name}}</p>
                                         </div>
                                     </div>
@@ -46,12 +46,12 @@
                         </div>
                             @foreach ($groups as $group)
                                 <div class="d-flex justify-content-around">
-                                    <div class="mt-2">
+                                    <div class="">
                                         <label>
                                             <input type="checkbox" value="{{$group->id}}" name="group[]">
                                         </label>
                                     </div>
-                                    <div class="users ml-3 mr-2">
+                                    <div class="users ml-3 mr-2 mt-1">
                                         <p class="users-text text-white">{{$group->name}}</p>
                                     </div>
                                     <div class="d-flex flex-start">
