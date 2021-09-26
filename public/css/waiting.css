@@ -63,6 +63,8 @@
     align-items: center;
     margin: auto;
     width: 100vw;
+    margin-top: 20vh;
+    margin-bottom: 5vh;
   
   }
   .preloader, .preloader__ring {
