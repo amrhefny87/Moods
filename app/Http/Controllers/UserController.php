@@ -73,12 +73,13 @@ class UserController extends Controller
     public function redirectUsers(){
         $user = auth()->user();
         $group = Group::find($user->group_id);
-        if ($group){
-            if ($group->ready){
-            return redirect()->route('characters');
-            }else{
+        
+        if ($group === null || !$group->ready==1){
+            
             return view('waiting')->with('waitMsg','El juego no esta listo, repite otra vez en un rato');
-        }
+            }else{
+            return redirect()->route('characters');
+            
     }
     }
 

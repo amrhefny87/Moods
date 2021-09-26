@@ -91,10 +91,9 @@ body{
       transition: visibility 5s, opacity 10s linear;
       margin-top: 35vh;
       justify-content: center;
-      
+    }
 
-
-  }
+    
   .cover-contain{
         height: 100vh;
         object-fit: contain;
