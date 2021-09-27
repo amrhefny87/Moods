@@ -27,13 +27,8 @@
             </a>
         </div>  
     </div>
-    <div>
-        <a href="{{route('mission1')}}">
-            <img class="next" src="{{ secure_asset('images/next.png') }}" alt="">
-        </a>
-    </div>  
-    <script src="{{secure_asset('js/characteres.js')}}"></script>
-</body>
+
+
 
     
     <script src="{{secure_asset('js/characteres.js')}}"></script>
