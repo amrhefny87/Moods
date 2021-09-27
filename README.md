@@ -1,6 +1,8 @@
 # MOODS
 
-_Moods es un proyecto que busca hacer de un juego, una herramienta para psicólogos que tratan la adicción a las pantallas.Se basa en una novela policial que a través de preguntas logra que los usuarios generen debates para poder descubrir quien es el "impostor" dentro de su grupo y que finalidad tienen los videojuegos para generar una dependencia/adicción, así generar más consumo y rentabilidad.
+_Moods es un proyecto que creado por el grupo de desarrollo FATAAA, en conjunto con la fundacion Nous Cims._ 
+_Desarrollando asi, un juego de trivias, que busca tratar la adicción a las pantallas en los jovenes de edad escolar._
+_Se basa en una novela policial que a través de preguntas logra que los usuarios generen debates para poder descubrir quien es el "impostor" dentro de su grupo y que finalidad tienen los videojuegos para generar una dependencia/adicción, así generar más consumo y rentabilidad._
 
 ## Comenzando 🚀
 
@@ -24,10 +26,12 @@ _Para poder comenzar a jugar, tienes que registrarte con un nombre de usuario y 
 
 
 
- comenzaran las preguntas que deberán contestar en grupo, tratando de descubrir con debates entre pregunta y pregunta quien es el "impostor" en el grupo y quiere desviar las respuestas correctas._
+ _comenzaran las preguntas que deberán contestar en grupo,_
  
  
  ![moods preguntas](https://user-images.githubusercontent.com/78723982/134860477-b3970ad4-5866-4c9e-b984-37f79b6baf4d.png)
+ 
+ _Una vez finalizadas las preguntas deberan debatir con el grupo, para ver quien es el "impostor"._
 
 
 
@@ -43,7 +47,8 @@ _Estas son las herramientas que utilizamos para crear la aplicación_
 
 
 ## Origen 📖
-Este proyecto se creo en el marco del Bootcamp de Factoria F5, como proyecto final y en colaboracion con el grupo [NOUS CIMS](https://www.nouscims.com/) 
+Este proyecto se creo en el marco del Bootcamp de Factoria F5,
+como proyecto final y en colaboracion con el grupo [NOUS CIMS](https://www.nouscims.com/) 
 
 
 ## Versionado 📌
@@ -67,7 +72,7 @@ _Equipo de desarrollo FATAAA.
 -[Abdulha Idrees](https://www.linkedin.com/in/abdulha-idrees-195b051b7/)
 
 
-_En conjunto con el equipo de "NOUS CIMS"
+_En conjunto con el equipo de "NOUS CIMS"_
 
 _Pau Gomes_
 _Ania Perez Racana_
