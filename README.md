@@ -9,7 +9,7 @@ _Se basa en una novela policial que a través de preguntas logra que los usuario
 
 
 
-_Para poder comenzar a jugar,  http://moods-nous-cims.herokuapp.com/_
+_Para poder comenzar a jugar ingresa en este link  http://moods-nous-cims.herokuapp.com/_
 
 
 
