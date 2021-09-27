@@ -53,7 +53,8 @@ _Equipo de desarrollo FATAAA.
 
 _En conjunto con el equipo de "NOUS CIMS"
 
+_Ania Perez Racana
 _Pau Gomes_
-_Ania Perez Racana_
+
 
 

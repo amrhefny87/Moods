@@ -26,7 +26,7 @@
         <p class="impostor-name">El/la impostor es: {{$impostor->name}}</p>
     </div>
     <script src="{{asset('js/mission.js')}}"></script>
-    </body>
+</body>
 
-    </html>
+</html>
    

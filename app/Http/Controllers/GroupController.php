@@ -18,6 +18,7 @@ class GroupController extends Controller
         ->with('users',$users);
     
     }
+    
     public function store(Request $request)
     {
         $groups = Group::all();
@@ -26,14 +27,7 @@ class GroupController extends Controller
             'name'=>request()->name
         ]);
         $group->save();
-        
         return redirect()->route('groupsList');
-        
-
-
-        
-
-
     }
 
     public function destroy($id){

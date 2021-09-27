@@ -68,18 +68,16 @@
         </div>
     </div>
     <div class="waiting d-flex justify-content-center mt-5">
-                
-                    <a href="{{route('redirectUsers')}}" class="text-white">
-                        <button class="btn btn-outline-light">
-                        Espere hasta que el administrador inicie el juego, luego haga click
-                        </button>
-                    </a>
-                    @if(!empty($waitMsg))
-                    <div class="msg mt-1"> 
-                        <p class="msg-text mx-2">{{$waitMsg}}</p>
-                    </div>
-                    @endif
-                
+        <a href="{{route('redirectUsers')}}" class="text-white">
+            <button class="btn btn-outline-light">
+                Espere hasta que el administrador inicie el juego, luego haga click
+            </button>
+        </a>
+        @if(!empty($waitMsg))
+        <div class="msg mt-1"> 
+            <p class="msg-text mx-2">{{$waitMsg}}</p>
+        </div>
+        @endif   
     </div>
 </div>
 @endsection
