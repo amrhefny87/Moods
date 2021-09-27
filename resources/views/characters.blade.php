@@ -6,7 +6,7 @@
 
     <div class="characters-container">
         <div class="who-are-you">
-            <img class="ch0" src="{{ asset('images/character0.jpg') }} " />
+            <img class="ch0" src="{{ secure_asset('images/character0.jpg') }} " />
             <h2>¿Quién eres?</h2>
             
         </div>
@@ -23,7 +23,7 @@
         </div>
         <div class="next-ch d-flex align-items-end">
             <a href="{{route('mission1')}}">
-                <img class="next" src="{{ asset('images/next.png') }}" alt="">
+                <img class="next" src="{{ secure_asset('images/next.png') }}" alt="">
             </a>
         </div>  
     </div>
@@ -36,7 +36,7 @@
 </body>
 
     
-    <script src="{{asset('js/characteres.js')}}"></script>
+    <script src="{{secure_asset('js/characteres.js')}}"></script>
 </div>
 </div>
 @endsection
