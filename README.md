@@ -6,7 +6,14 @@ _Se basa en una novela policial que a través de preguntas logra que los usuario
 
 ## Comenzando 🚀
 
-_Para poder comenzar a jugar, tienes que registrarte con un nombre de usuario y tu email._
+
+
+
+_Para poder comenzar a jugar,  http://moods-nous-cims.herokuapp.com/_
+
+
+
+ _luego tienes que registrarte con un nombre de usuario y tu email._
 
 
 ![image](https://user-images.githubusercontent.com/78723982/134329271-ed24ea91-6f2d-4774-a4eb-d1889a7a7c69.png)
