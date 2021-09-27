@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -30,6 +31,11 @@
     </head>
     <body>
     <div class="preloader mt-5">
+=======
+@section('waiting')
+<div>
+    <div class="preloader">
+>>>>>>> 225a8ce6e85d845dc4d820b05955e5509283bd28
         <div class="preloader__ring">
             <div class="preloader__sector">L</div>
             <div class="preloader__sector">o</div>
@@ -108,6 +114,6 @@
                     </div>
                     @endif
                 
-            </div>
-        
-    </body>
+    </div>
+</div>
+@endsection
