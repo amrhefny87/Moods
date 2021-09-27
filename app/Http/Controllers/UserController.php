@@ -10,17 +10,14 @@ class UserController extends Controller
 {
     public function index(){
         $users = User::all();
-        
         return($users);
     }
 
     public function updateImpostorStatus($id){
-        
         $user = User::find($id);     
         $user->update([
             'impostor' => 1,
         ]);
-        
         return ($user);
     }
 
@@ -30,22 +27,15 @@ class UserController extends Controller
             $user->group_id = $request->group[0];
             $user->save();
         };
-        
-        
         return redirect()->route('groupsList');
         
     }
 
     public function removeGroupId ($id){
         $user = User::find($id);
-        
-
         $user->group_id = null;
         $user->save();
-        
         return redirect()->route('groupsList');
-
-        
     }
 
     public function chooseTheImpostor (){
@@ -65,19 +55,15 @@ class UserController extends Controller
             $group->save();
         };
         return redirect()->route('groupsList');
-
     }
 
     public function redirectUsers(){
         $user = auth()->user();
         $group = Group::find($user->group_id);
-        
         if ($group === null || !$group->ready==1){
-            
             return view('waiting')->with('waitMsg','El juego no esta listo, repite otra vez en un rato');
             }else{
             return redirect()->route('characters');
-            
     }
     }
 
@@ -90,7 +76,6 @@ class UserController extends Controller
             $characters=$json_file;
             $users = collect(User::all())->where('group_id', $group->id)->all();
             foreach ($users as $user){
-
                 $arrayId= array_rand($characters);
                 $character = $characters[$arrayId];
                 $user->character_id = $character["id"];
@@ -98,7 +83,6 @@ class UserController extends Controller
                 unset($characters[$arrayId]);
             };
         }
-        
         return ($usersAll);
         
     }
@@ -107,7 +91,6 @@ class UserController extends Controller
         $this->chooseTheImpostor ();
         $this->getCharacter();
         return redirect()->route('groupsList');
-        
     }
 
     public function characters(){
@@ -115,17 +98,12 @@ class UserController extends Controller
         $data = file_get_contents ('../characters.json');
         $json_file = json_decode($data, true);
         $characters=$json_file;
-        
-        
         $character= collect($characters)->where('id', $user->character_id)->first();
-        
         if ($character){
             return view('characters')->with('character',$character)->with('user',$user);
         }else{
             return view('waiting')->with('waitMsg','El juego no esta listo, repite otra vez en un rato');
-        }
-    
-        
+        }    
     }
 
     public function impostor(){
@@ -135,8 +113,6 @@ class UserController extends Controller
         $data = file_get_contents ('../characters.json');
         $json_file = json_decode($data, true);
         $characters=$json_file;
-
-        
         $character= collect($characters)->where('id', $impostor->character_id)->first();
         return view('impostor')->with('character',$character)->with('impostor',$impostor);;
     }
@@ -154,6 +130,5 @@ class UserController extends Controller
             
         }
         return redirect()->route('welcome');
-
     }
 }

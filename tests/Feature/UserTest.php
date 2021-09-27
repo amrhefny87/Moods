@@ -28,7 +28,6 @@ class UserTest extends TestCase
         $user = User::factory()->create([
             'id'=>1
         ]);
-        
         $response = $this->get('/users');
         $response->assertOk();
         $this->assertCount(1, User::all());
@@ -48,24 +47,19 @@ class UserTest extends TestCase
     //     $this->withoutExceptionHandling();
     //     $users[] = User::factory(2)->create();
     //     $group[] = Group::factory()->create();
-        
-        
     //     $i=0;
     //     $userArray = [];
     //     foreach ($users[0] as $user){
     //         array_push($userArray, $users[0][$i]["id"]);
     //         $i =+ 1;
     //     }
-        
     //     $response = $this->post('/users_link', [
     //         'user'=>$userArray,
     //         'group'=>$group[0]["id"]       
     //     ]);
     //     // dd($response);
     //     $user = User::find($users[1]->id);
-        
     //     $this->assertEquals($user->group_id,1);
-
     // }
 
     // /** @test */
@@ -76,15 +70,10 @@ class UserTest extends TestCase
     //     $users = User::factory(1)->create([
     //         'group_id'=>1
     //     ]);
-        
     //     // 
     //     $response = $this->get('/users_unlink/{id}');
-        
-        
     //     $user = User::find($users[0]->id);
     //     $this->assertEquals($user->group_id,null);
-
-
     // }
 
     // /** @test */
@@ -92,15 +81,7 @@ class UserTest extends TestCase
     // {
     //     $this->withoutExceptionHandling();
     //     $group = Group::factory(1)->create();
-
     //     $response = $this->get('/impostor');
     //     $response->assertOk();
-    // }
-    
-    
-    
-    
-
-
-    
+    // }    
 }

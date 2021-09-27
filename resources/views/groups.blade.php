@@ -79,9 +79,7 @@
                                 </div>
                             @endforeach
                 </form>
-
             </div>
-            
         </div>
         <div class="footer mt-2">
             <div>
