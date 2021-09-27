@@ -10,7 +10,11 @@ _Para poder comenzar a jugar, tienes que registrarte con un nombre de usuario y 
  _Luego el administrador dividirá a todos los users en distintos grupos de al rededor de 4/5 jugadores._
  ![image](https://user-images.githubusercontent.com/78723982/134329389-4a48ff53-c3ea-470f-98f8-f852a7811f6e.png)
 
- _Una vez que estén todos los grupos formados, comenzaran las preguntas que deberán contestar en grupo, tratando de descubrir con debates entre pregunta y pregunta quien es el "impostor" en el grupo y quiere desviar las respuestas correctas._
+ _Una vez que estén todos los grupos formados, sabras cual es tu personaje y tu rol en el equipo
+ 
+ ![moods rol](https://user-images.githubusercontent.com/78723982/134860077-dc21f1f4-0fb2-4004-a281-5bf78a9f24d9.png)
+
+ comenzaran las preguntas que deberán contestar en grupo, tratando de descubrir con debates entre pregunta y pregunta quien es el "impostor" en el grupo y quiere desviar las respuestas correctas._
  
  
 
