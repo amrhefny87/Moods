@@ -18,12 +18,6 @@
     
 
     <!-- Styles -->
-<<<<<<< HEAD
-    <link href="{{secure_asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{secure_asset('css/login.css') }}" rel="stylesheet">
-    <link href="{{secure_asset('css/characters.css') }}" rel="stylesheet">
-    <link href="{{secure_asset('css/intro.css')}}" rel="stylesheet">
-=======
     <link href="{{asset('css/app.css') }}" rel="stylesheet">
     <link href="{{asset('css/login.css') }}" rel="stylesheet">
     <link href="{{asset('css/characters.css') }}" rel="stylesheet">
@@ -32,7 +26,6 @@
     <link href="{{asset('css/waiting.css')}}" rel="stylesheet"/>
     <link href="{{ asset('css/characters.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/mission.css') }}" rel="stylesheet" />
->>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
 </head>
 
 

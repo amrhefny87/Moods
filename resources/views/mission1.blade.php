@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -21,10 +20,8 @@
 </head>
 
 <body>
-=======
 @section('mission1')
 <div>
->>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
     <div class="cover-contain">
         
 
@@ -46,13 +43,10 @@
         <a href="{{route('mission2')}}" class="buttonNext"><img class="next" src="{{ secure_asset('images/next.png') }}" alt=""></a>
         
     </div>
-<<<<<<< HEAD
     <script src="{{secure_asset('js/mission.js')}}"></script>
     </body>
-=======
     
 </div>
 @endsection
->>>>>>> 16205460992a46b07d6ee132a49ac06ee2f14487
 
    
