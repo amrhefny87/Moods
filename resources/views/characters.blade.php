@@ -32,7 +32,5 @@
 
     
     <script src="{{secure_asset('js/characteres.js')}}"></script>
-</div>
-</div>
 @endsection
 
