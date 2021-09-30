@@ -27,7 +27,7 @@ _Para empezar a jugar, ingresa en este link:  http://moods-nous-cims.herokuapp.c
 
 
 
- _Una vez, que estén todos los grupos formados, sabrás cuál es tu personaje y tu rol en el equipo
+ _Una vez, que estén todos los grupos formados, sabrás cuál es tu personaje y tu rol en el equipo._
  
  ![moods rol](https://user-images.githubusercontent.com/78723982/134860077-dc21f1f4-0fb2-4004-a281-5bf78a9f24d9.png)
 
